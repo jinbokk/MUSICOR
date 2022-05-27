@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "SCDream4";
+  src: url(/font/SCDream4.otf);
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  font-family: "SCDream4";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  text-align: start;
+  color: black;
+}
+
+.linear-wipe {
+  background: linear-gradient(to right, rgb(0, 0, 0) 20%, rgb(221, 16, 16) 40%, rgb(27, 45, 252) 60%, rgb(49, 49, 49) 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  height: 80vh;
+  background-color: rgba(255, 255, 255, 0.75);
+  /* background-clip: content-box; */
+  position: relative;
+  border-radius: 1%;
+  padding-left: 25vw;
+}
+
+@media screen and (max-width:768px) {
+  .container {
+    width: 100vw;
+    height: 80vh;
+  }
+}
