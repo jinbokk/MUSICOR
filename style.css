@@ -14,6 +14,12 @@ body {
   align-items: center;
 }
 
+/* CSS를 활용한 색상 반반 나누기 tutorial */
+/* http://rwdb.kr/css_custum_color/ */
+
+/* MusicBrainz */
+/* https://musicbrainz.org/ */
+
 .title {
   color: white;
   position: absolute;
@@ -48,7 +54,7 @@ body {
   background-color: rgba(255, 255, 255, 0.75);
   /* background-clip: content-box; */
   position: relative;
-  border-radius: 1%;
+  border-radius: 15px;
   padding-left: 25vw;
 }
 
