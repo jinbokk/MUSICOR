@@ -1,36 +1,21 @@
-const APIController = (function () {
+// API Key: c86ba179640ade3c2fa8346ff63f5dc6
 
-  const clientId = 'f5d847d6012d455ab5e1c80a3011f215';
-  const clientSecret = 'a5fbc11da2cf4878a5bdd9998a14c64a';
+// Shared Secret: 6def7bc785f76438acfd84255939fb7c
 
-  const _getToken = async () => {
 
-    const result = await fetch('https://accounts.spotify.com/api/token', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': 'Basic' + btoa(clientId + ':' + clientSecret)
-      },
-      body: 'grant+type=client_credentials'
-    });
+const getToken = async () => {
+  let url = new URL('http://www.last.fm/api/auth/');
 
-    const data = await result.json();
-    return data.access_token;
-  }
-
-})();
-
-const _getGenres = async (token) => {
-
-  const result = await fetch('https://api.spotify.com/v1/brows/categories?locale=sv_US', {
-    method: 'GET',
-    headers: {
-      'Authorization': 'Bearer' + token
-    }
+  let headers = new Headers({
+    'api_key': 'c86ba179640ade3c2fa8346ff63f5dc6'
   });
 
-  const data = await result.json();
-  return data.categories.items;
-}
+  let response = await fetch(url, {
+    headers: header
+  });
 
-console.log(_getGenres())
+  let data = await response.json();
+
+  console.log(data);
+}
+getToken()
