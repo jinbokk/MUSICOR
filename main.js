@@ -1,6 +1,6 @@
 // API Key: c86ba179640ade3c2fa8346ff63f5dc6
 
-// Shared Secret: 6def7bc785f76438acfd84255939fb7c
+// Shared Secret: -
 
 
 const getToken = async () => {
