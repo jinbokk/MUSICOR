@@ -2,6 +2,9 @@
 
 // Shared Secret: -
 
+// image api
+//https://www.contentful.com/developers/docs/references/images-api/#/reference/changing-formats/progressive-jpegs/retrieve-an-image/console/js
+
 
 const getToken = async () => {
   let url = new URL('http://www.last.fm/api/auth/');
