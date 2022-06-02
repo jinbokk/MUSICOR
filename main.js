@@ -27,7 +27,7 @@
 const bgImgRender = () => {
   let imgs = [
     "/images/freepik/freepik_background_ (1).webp",
-    "/images/freepik/freepik_background_ (2).webp",
+    // "/images/freepik/freepik_background_ (2).webp",
     "/images/freepik/freepik_background_ (3).webp",
     "/images/freepik/freepik_background_ (4).webp"
   ];
@@ -38,7 +38,7 @@ const bgImgRender = () => {
 
   bg.style.backgroundImage = 'url("' + bg_img + '")';
   bg.style.backgroundRepeat = "no-repeat";
-  bg.style.backgroundSize = "cover";
+  bg.style.backgroundSize = "contain";
 
   console.log(bg_img)
 }

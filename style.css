@@ -9,6 +9,7 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: "SCDream4";
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,13 +25,12 @@ body {
 }
 
 .linear-wipe {
-  background: linear-gradient(to right, rgb(0, 0, 0) 20%, rgb(221, 16, 16) 40%, rgb(27, 45, 252) 60%, rgb(49, 49, 49) 80%);
+  background: linear-gradient(to right, rgb(135, 0, 135) 0%, rgb(221, 16, 16) 25%, rgb(135, 0, 135) 50%, rgb(27, 45, 252) 75%, rgb(135, 0, 135) 100%);
   background-size: 200% auto;
-  color: #000;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 5s linear infinite;
+  animation: shine 4s linear infinite;
 }
 
 @keyframes shine {
@@ -45,7 +45,7 @@ body {
   align-items: center;
   width: 60vw;
   height: 80vh;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.9);
   /* background-clip: content-box; */
   position: relative;
   border-radius: 15px;
@@ -59,7 +59,7 @@ body {
   }
 }
 
-.slider {
+/* .slider {
   position: relative;
   width: 200px;
   height: 200px;
@@ -105,7 +105,7 @@ body {
 .box {
   width: 300px;
   height: 300px;
-}
+} */
 
 .black {
   background-color: black;
