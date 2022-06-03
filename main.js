@@ -39,8 +39,5 @@ const bgImgRender = () => {
   bg.style.backgroundImage = 'url("' + bg_img + '")';
   bg.style.backgroundRepeat = "no-repeat";
   bg.style.backgroundSize = "contain";
-
-  console.log(bg_img)
 }
-
 bgImgRender()
