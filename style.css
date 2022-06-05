@@ -1,11 +1,11 @@
 @font-face {
   font-family:'SCDream4';
-  src: url(/font/SCDream4.otf) format('otf');
+  src: url('/font/SCDream4.otf');
 }
 
 @font-face {
   font-family:'ONE';
-  src: url(/font/ONE.otf) format('otf');
+  src: url('/font/ONE.otf');
 }
 
 body {
@@ -32,6 +32,21 @@ nav span {
   padding-right: 20px;
 }
 
+.linear_wipe {
+  background: linear-gradient(to right, rgb(135, 0, 135) 0%, rgb(221, 16, 16) 25%, rgb(135, 0, 135) 50%, rgb(27, 45, 252) 75%, rgb(135, 0, 135) 100%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
 #main_section {
   position:relative;
   text-align: center;
@@ -45,7 +60,6 @@ nav span {
   font-size: 7vw;
   font-weight: bold;
   font-family: 'ONE';
-  /* text-shadow: 5px 5px 20px rgb(0, 0, 0); */
   text-align: left;
   color: rgb(220, 220, 220);
   position: absolute;
