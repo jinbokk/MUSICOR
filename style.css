@@ -1,11 +1,17 @@
 @font-face {
-  font-family: "SCDream4";
+  font-family:"SCDream4";
   src: url(/font/SCDream4.otf);
+}
+
+@font-face {
+  font-family:"Dubai";
+  src: url(/font/DUBAI-BOLD.TTF);
 }
 
 body {
   margin: 0;
   background-color: black;
+  font-family: "SCDream4";
 }
 
 nav {
@@ -38,7 +44,8 @@ nav span {
 .subTitle {
   font-size: 7vw;
   font-weight: bold;
-  text-shadow: 5px 5px 20px rgb(0, 0, 0);
+  font-family: "Dubai";
+  /* text-shadow: 5px 5px 20px rgb(0, 0, 0); */
   text-align: left;
   color: rgb(220, 220, 220);
   position: absolute;
