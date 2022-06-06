@@ -69,6 +69,13 @@ nav span {
   transition: 0.3s;
 }
 
+/* -------------swiper------------- */
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
 /* -------------subTitle_section------------- */
 
 #subTitle_section {
@@ -146,8 +153,8 @@ nav span {
   justify-content: center;
 }
 
-.box {
-  width: 300px;
+.colorContainer {
+  width: 600px;
   height: 300px;
   opacity: 0.6;
   display: flex;
@@ -155,11 +162,12 @@ nav span {
   justify-content: center;
 }
 
-.box div {
+.colorContainer div {
   line-height: 50px;
   text-align: center;
   vertical-align: middle;
   font-size: 15px;
+  background-image: url();
 }
 
 .black {
