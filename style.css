@@ -28,7 +28,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
 }
 
@@ -69,6 +69,30 @@ nav span {
   transition: 0.3s;
 }
 
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
 /* -------------subTitle_section------------- */
 
 #subTitle_section {
@@ -77,23 +101,27 @@ nav span {
   border-bottom: 1px solid white;
 }
 
+
 #subTitle_section img {
   height: 100%;
   width: 100%;
   padding-bottom: 100px;
   object-fit: cover;
+  -webkit-animation: fadeInLeft 1s;
 }
 
 .subTitle {
   position: absolute;
-  font-size: 120px;
+  font-size: 100px;
   font-weight: bold;
   font-family: 'ONE';
   text-align: left;
   color: rgb(220, 220, 220);
   position: absolute;
-  top: 230px;
+  top: 200px;
   left: 100px;
+  -webkit-animation: fadeInTop 1s;
+  z-index: 1;
 }
 
 /* -------------intro_section------------- */
@@ -113,6 +141,7 @@ nav span {
   object-fit: cover;
   position: absolute;
   right: 0;
+  -webkit-animation: fadeInLeft 1s;
 }
 
 .textContainer {
@@ -120,6 +149,7 @@ nav span {
   right: 750px;
   top: 20vh;
   text-align: right;
+  -webkit-animation: fadeInLeft 1s;
 }
 
 .textContainer h1 {
@@ -159,14 +189,6 @@ nav span {
 .colorContainer:hover {
   transform: scale(1.08);
   transition: 0.2s;
-}
-
-.colorContainer div {
-  line-height: 50px;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 15px;
-  background-image: url();
 }
 
 .black {
