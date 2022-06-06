@@ -1,17 +1,17 @@
 @font-face {
-  font-family:'SCDream4';
+  font-family: 'SCDream4';
   src: url('/font/SCDream4.otf');
 }
 
 @font-face {
-  font-family:'ONE';
+  font-family: 'ONE';
   src: url('/font/ONE.otf');
 }
 
 body {
   margin: 0;
   background-color: black;
-  font-family: 'ONE','SCDream4','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'ONE', 'SCDream4', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav {
@@ -25,6 +25,11 @@ nav {
   height: 60px;
   font-size: 24px;
   color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  cursor: pointer;
 }
 
 nav span {
@@ -47,22 +52,158 @@ nav span {
   }
 }
 
-#main_section {
-  position:relative;
-  text-align: center;
+.downArrow {
+  position: fixed;
+  bottom: 3%;
+  left: 50%;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.3s;
 }
 
-#main_section img {
-  width: 100vw;
+.downArrow:hover {
+  color: white;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/* -------------subTitle_section------------- */
+
+#subTitle_section {
+  height: 900px;
+  margin-top: 60px;
+  border-bottom: 1px solid white;
+}
+
+#subTitle_section img {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 100px;
+  object-fit: cover;
 }
 
 .subTitle {
-  font-size: 7vw;
+  position: absolute;
+  font-size: 120px;
   font-weight: bold;
   font-family: 'ONE';
   text-align: left;
   color: rgb(220, 220, 220);
   position: absolute;
-  top: 20%;
-  left: 6%;
+  top: 230px;
+  left: 100px;
+}
+
+/* -------------intro_section------------- */
+
+#intro_section {
+  position: relative;
+  height: 700px;
+  overflow: auto;
+  background-color: gray;
+  border-bottom: 1px solid white;
+  overflow-wrap: normal;
+}
+
+.imgContainer img {
+  height: 100%;
+  background-image: url("images/Pexels/pexcels_colorful.jpg");
+  background-repeat: none;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+}
+
+.textContainer {
+  position: absolute;
+  left: 100px;
+  top: 20vh;
+  text-align: right;
+}
+
+.textContainer h1 {
+  font-size: 50px;
+  margin-bottom: 150px;
+}
+
+.textContainer p {
+  font-size: 30px;
+}
+
+
+/* -------------colorPick_section------------- */
+
+.colorPick_section_title {
+  text-align: center;
+  font-size: 25px;
+  padding: 30px;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  opacity: 0.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box div {
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+.black {
+  background-color: black;
+  border-radius: 10px;
+}
+
+.gray {
+  background-color: gray;
+  border-radius: 10px;
+}
+
+.violet {
+  background-color: violet;
+  border-radius: 10px;
+}
+
+.yellow {
+  background-color: yellow;
+  border-radius: 10px;
+}
+
+.white {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.orange {
+  background-color: orange;
+  border-radius: 10px;
+}
+
+.red {
+  background-color: red;
+  border-radius: 10px;
+}
+
+.blue {
+  background-color: blue;
+  border-radius: 10px;
+}
+
+.green {
+  background-color: green;
+  border-radius: 10px;
 }

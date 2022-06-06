@@ -6,7 +6,7 @@ const randomImgRender = () => {
   ];
   let mainImgSelect = mainImgs[Math.floor(Math.random() * mainImgs.length)]
 
-  document.getElementById("main_section").innerHTML +=
+  document.getElementById("subTitle_section").innerHTML +=
   '<img src="'+mainImgSelect+'"/>'
 }
 randomImgRender()
