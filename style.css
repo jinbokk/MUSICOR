@@ -69,13 +69,6 @@ nav span {
   transition: 0.3s;
 }
 
-/* -------------swiper------------- */
-
-.swiper {
-  width: 600px;
-  height: 300px;
-}
-
 /* -------------subTitle_section------------- */
 
 #subTitle_section {
@@ -148,18 +141,24 @@ nav span {
   color: white;
 }
 
-.container {
+.colorPick_container {
   display: flex;
   justify-content: center;
 }
 
 .colorContainer {
-  width: 600px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
+  margin: 50px;
   opacity: 0.6;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  transition: 0.2s;
+}
+
+.colorContainer:hover {
+  transform: scale(1.08);
+  transition: 0.2s;
 }
 
 .colorContainer div {
