@@ -149,7 +149,7 @@ nav span {
   right: 750px;
   top: 20vh;
   text-align: right;
-  -webkit-animation: fadeInLeft 1s;
+  -webkit-animation: fadeInTop 1s;
 }
 
 .textContainer h1 {
@@ -199,6 +199,10 @@ nav span {
 .gray {
   background-color: gray;
   border-radius: 10px;
+}
+
+.gray img{
+  object-fit: cover;
 }
 
 .violet {
