@@ -161,7 +161,6 @@ nav span {
   font-size: 30px;
 }
 
-
 /* -------------colorPick_section------------- */
 
 .colorPick_section_title {
@@ -179,11 +178,12 @@ nav span {
 .colorContainer {
   width: 200px;
   height: 200px;
+  border-radius: 10px;
   margin: 50px;
-  opacity: 0.6;
   display: flex;
   justify-content: center;
   transition: 0.2s;
+  opacity: .2;
 }
 
 .colorContainer:hover {
@@ -193,49 +193,72 @@ nav span {
 
 .black {
   background-color: black;
-  border-radius: 10px;
+  background-image: url("/images/Pexels/black/pexels_black.jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
 }
 
 .gray {
   background-color: gray;
-  border-radius: 10px;
-}
-
-.gray img{
-  object-fit: cover;
+  background-image: url("/images/freepik/gray/freepik_gray_ (2).jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
 }
 
 .violet {
   background-color: violet;
-  border-radius: 10px;
+  background-image: url("/images/freepik/violet/freepik_violet_ (1).jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
 }
 
 .yellow {
   background-color: yellow;
-  border-radius: 10px;
+  background-image: url("/images/freepik/yellow/freepik_yellow_(1).jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
 }
 
 .white {
   background-color: white;
-  border-radius: 10px;
+  background-image: url("/images/freepik/white/freepik_white_ (1).jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
 }
 
 .orange {
   background-color: orange;
-  border-radius: 10px;
+  background-image: url("/images/Pexels/orange/pexels_orange_ (1).jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
 }
 
 .red {
   background-color: red;
-  border-radius: 10px;
+  background-image: url("/images/freepik/red/freepik_red_ (1).jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
 }
 
 .blue {
   background-color: blue;
-  border-radius: 10px;
+  background-image: url("/images/freepik/blue/freepik_blue_ (1).jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
 }
 
 .green {
   background-color: green;
-  border-radius: 10px;
+  background-image: url("/images/freepik/green/freepik_green_ (1).jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
 }
