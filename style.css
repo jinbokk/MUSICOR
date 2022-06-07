@@ -10,7 +10,7 @@
 
 body {
   margin: 0;
-  background-color: black;
+  background-color: rgb(15, 15, 15);
   font-family: 'ONE', 'SCDream4', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -21,7 +21,7 @@ nav {
   padding-left: 30px;
   padding-right: 30px;
   align-items: center;
-  background-color: black;
+  background-color: rgb(15, 15, 15);
   height: 60px;
   font-size: 24px;
   color: white;
@@ -196,7 +196,7 @@ nav span {
 .black {
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .black::before {
@@ -218,7 +218,7 @@ nav span {
 .gray {
   position: relative;
   z-index: 1;
-  background-color: rgba(114, 114, 114, 0.5);
+  background-color: rgba(114, 114, 114, 0.1);
 }
 
 .gray::before {
@@ -239,7 +239,7 @@ nav span {
 .violet {
   position: relative;
   z-index: 1;
-  background-color: rgb(135, 27, 135, 0.5);
+  background-color: rgb(135, 27, 135, 0.1);
 }
 
 .violet::before {
@@ -261,7 +261,7 @@ nav span {
 .yellow {
   position: relative;
   z-index: 1;
-  background-color: rgba(255, 255, 0, 0.5);
+  background-color: rgba(255, 255, 0, 0.1);
 }
 
 .yellow::before {
@@ -283,7 +283,7 @@ nav span {
 .white {
   position: relative;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .white::before {
@@ -305,7 +305,7 @@ nav span {
 .orange {
   position: relative;
   z-index: 1;
-  background-color: rgb(255, 115, 0, 0.5);
+  background-color: rgb(255, 115, 0, 0.1);
 }
 
 .orange::before {
@@ -327,7 +327,7 @@ nav span {
 .red {
   position: relative;
   z-index: 1;
-  background-color: rgb(216, 25, 25, 0.5);
+  background-color: rgb(216, 25, 25, 0.1);
 }
 
 .red::before {
@@ -349,7 +349,7 @@ nav span {
 .blue {
   position: relative;
   z-index: 1;
-  background-color: rgb(35, 35, 188, 0.5);
+  background-color: rgb(35, 35, 188, 0.1);
 }
 
 .blue::before {
@@ -371,7 +371,7 @@ nav span {
 .green {
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 128, 0, 0.5);
+  background-color: rgba(0, 128, 0, 0.1);
 }
 
 .green::before {
