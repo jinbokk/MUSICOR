@@ -146,7 +146,7 @@ nav span {
 
 .textContainer {
   position: absolute;
-  right: 750px;
+  right: 850px;
   top: 20vh;
   text-align: right;
   -webkit-animation: fadeInTop 1s;
@@ -155,22 +155,24 @@ nav span {
 .textContainer h1 {
   font-size: 50px;
   color: rgb(220, 220, 220);
-  margin-bottom: 150px;
+  margin-bottom: 100px;
+  overflow: hidden;
 }
 
 .textContainer p {
-  font-size: 30px;
+  font-size: 22px;
   color: rgb(220, 220, 220);
+  overflow: hidden;
 }
 
 /* -------------colorPick_section------------- */
 
-.colorPick_section_title {
+/* .colorPick_section_title {
   text-align: center;
   font-size: 25px;
   padding: 30px;
   color: rgba(255, 255, 255, 0.5);
-}
+} */
 
 .colorPick_container {
   display: flex;
@@ -182,8 +184,10 @@ nav span {
   height: 200px;
   border-radius: 10px;
   margin: 50px;
+  padding-left: 13px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   transition: 0.2s;
   color: rgb(220, 220, 220);
 }
@@ -193,10 +197,20 @@ nav span {
   transition: 0.2s;
 }
 
+.colorContainer h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.colorContainer p {
+  font-size: 8px;
+  font-weight: 200;
+}
+
 .black {
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .black::before {
@@ -218,7 +232,7 @@ nav span {
 .gray {
   position: relative;
   z-index: 1;
-  background-color: rgba(114, 114, 114, 0.1);
+  background-color: rgba(114, 114, 114, 0.05);
 }
 
 .gray::before {
@@ -239,7 +253,7 @@ nav span {
 .violet {
   position: relative;
   z-index: 1;
-  background-color: rgb(135, 27, 135, 0.1);
+  background-color: rgb(135, 27, 135, 0.05);
 }
 
 .violet::before {
@@ -261,7 +275,7 @@ nav span {
 .yellow {
   position: relative;
   z-index: 1;
-  background-color: rgba(255, 255, 0, 0.1);
+  background-color: rgba(255, 255, 0, 0.05);
 }
 
 .yellow::before {
@@ -283,7 +297,7 @@ nav span {
 .white {
   position: relative;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .white::before {
@@ -305,7 +319,7 @@ nav span {
 .orange {
   position: relative;
   z-index: 1;
-  background-color: rgb(255, 115, 0, 0.1);
+  background-color: rgb(255, 115, 0, 0.05);
 }
 
 .orange::before {
@@ -327,7 +341,7 @@ nav span {
 .red {
   position: relative;
   z-index: 1;
-  background-color: rgb(216, 25, 25, 0.1);
+  background-color: rgb(216, 25, 25, 0.05);
 }
 
 .red::before {
@@ -349,7 +363,7 @@ nav span {
 .blue {
   position: relative;
   z-index: 1;
-  background-color: rgb(35, 35, 188, 0.1);
+  background-color: rgb(35, 35, 188, 0.05);
 }
 
 .blue::before {
@@ -371,7 +385,7 @@ nav span {
 .green {
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 128, 0, 0.1);
+  background-color: rgba(0, 128, 0, 0.05);
 }
 
 .green::before {
@@ -406,6 +420,10 @@ nav span {
   display: flex;
 }
 
+.footer_container .linear_wipe {
+  padding-right: 50px;
+}
+
 .col {
   color: rgb(220, 220, 220);
   display: block;
@@ -416,10 +434,12 @@ nav span {
 }
 
 .col p {
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .col a {
+  font-size: 11px;
   display: inline-block;
   padding-top: 20px;
   cursor: pointer;
