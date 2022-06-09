@@ -389,3 +389,46 @@ nav span {
   background-size: cover;
   border-radius: 10px;
 }
+
+/* -------------footer_section------------- */
+
+.footer_section {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  height: 350px;
+}
+
+.footer_container {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  color: rgb(220, 220, 220);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 100%;
+  width: 50%;
+  vertical-align: middle;
+}
+
+.col a {
+  padding-top: 15px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.col a:hover {
+  color: aqua;
+  transition: .2s;
+}
+
+.col img {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
