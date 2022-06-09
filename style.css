@@ -404,31 +404,38 @@ nav span {
   padding-bottom: 5%;
   height: 100%;
   display: flex;
-  flex-direction: row;
 }
 
 .col {
   color: rgb(220, 220, 220);
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+  display: block;
   height: 100%;
   width: 50%;
-  vertical-align: middle;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col p {
+  font-size: 14px;
 }
 
 .col a {
-  padding-top: 15px;
+  display: inline-block;
+  padding-top: 20px;
   cursor: pointer;
-  transition: .2s;
 }
 
 .col a:hover {
-  color: aqua;
-  transition: .2s;
+  background: linear-gradient(to right, rgb(135, 0, 135) 0%, rgb(221, 16, 16) 25%, rgb(135, 0, 135) 50%, rgb(27, 45, 252) 75%, rgb(135, 0, 135) 100%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
 }
 
 .col img {
-  padding-top: 15px;
-  padding-bottom: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
