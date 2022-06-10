@@ -86,32 +86,3 @@ const randomImgRender = () => {
   //   '<img src="' + greenSelect + '"/>'
 }
 randomImgRender()
-
-// let introSectionAnimation = () => {
-//   let introSection = document.getElementById('intro_section');
-//   console.log(introSection)
-// }
-
-
-// window.addEventListener('scroll', () => {
-//   const scrolled = window.scrollY
-
-//   if (scrolled == 450) {
-//     introSectionAnimation()
-//   }
-// })
-
-function scroll() {
-
-  let introSection = document.getElementById('intro_section');
-  let offset = 300;
-  let introSectionOST = introSection.offsetTop - offset;
-
-  window.scroll(function () {
-    if (this.scrollTop() > introSectionOST) {
-      introSectionOST.find('img').addClass('fadeInTop');
-      console.log("scrolled!")
-    }
-  });
-};
-scroll()

@@ -218,7 +218,6 @@ nav span {
 .black {
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .black::before {
@@ -237,10 +236,14 @@ nav span {
   border-radius: 10px;
 }
 
+.black:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: 0.5s;
+}
+
 .gray {
   position: relative;
   z-index: 1;
-  background-color: rgba(114, 114, 114, 0.05);
 }
 
 .gray::before {
@@ -258,10 +261,14 @@ nav span {
   border-radius: 10px;
 }
 
+.gray:hover {
+  background-color: rgb(114, 114, 114, 0.9);
+  transition: 0.5s;
+}
+
 .violet {
   position: relative;
   z-index: 1;
-  background-color: rgb(135, 27, 135, 0.05);
 }
 
 .violet::before {
@@ -280,10 +287,14 @@ nav span {
   border-radius: 10px;
 }
 
+.violet:hover {
+  background-color: rgb(135, 27, 135, 0.9);
+  transition: 0.5s;
+}
+
 .yellow {
   position: relative;
   z-index: 1;
-  background-color: rgba(255, 255, 0, 0.05);
 }
 
 .yellow::before {
@@ -302,10 +313,14 @@ nav span {
   border-radius: 10px;
 }
 
+.yellow:hover {
+  background-color: rgba(255, 255, 0, 0.9);
+  transition: 0.5s;
+}
+
 .white {
   position: relative;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .white::before {
@@ -324,10 +339,14 @@ nav span {
   border-radius: 10px;
 }
 
+.white:hover {
+  background-color: rgb(255, 255, 255, 0.9);
+  transition: 0.5s;
+}
+
 .orange {
   position: relative;
   z-index: 1;
-  background-color: rgb(255, 115, 0, 0.05);
 }
 
 .orange::before {
@@ -346,10 +365,14 @@ nav span {
   border-radius: 10px;
 }
 
+.orange:hover {
+  background-color: rgb(255, 115, 0, 0.5);
+  transition: 0.5s;
+}
+
 .red {
   position: relative;
   z-index: 1;
-  background-color: rgb(216, 25, 25, 0.05);
 }
 
 .red::before {
@@ -368,10 +391,14 @@ nav span {
   border-radius: 10px;
 }
 
+.red:hover {
+  background-color: rgb(216, 25, 25, 0.9);
+  transition: 0.5s;
+}
+
 .blue {
   position: relative;
   z-index: 1;
-  background-color: rgb(35, 35, 188, 0.05);
 }
 
 .blue::before {
@@ -390,10 +417,14 @@ nav span {
   border-radius: 10px;
 }
 
+.blue:hover {
+  background-color: rgba(35, 35, 188, 0.9);
+  transition: 0.5s;
+}
+
 .green {
   position: relative;
   z-index: 1;
-  /* background-color: rgba(0, 128, 0, 0.05); */
 }
 
 .green::before {
@@ -414,15 +445,14 @@ nav span {
 }
 
 .green:hover{
-  /* background-color: rgb(0, 83, 8); */
-  opacity: .3;
+  background-color: rgb(0, 83, 8, 0.9);
   transition: 0.5s;
 }
 
 /* -------------footer_section------------- */
 
 .footer_section {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgb(255, 255, 255, 0.3);
   height: 350px;
 }
 
