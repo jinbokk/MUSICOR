@@ -7,7 +7,7 @@ const randomImgRender = () => {
   let mainImgSelect = mainImgs[Math.floor(Math.random() * mainImgs.length)]
 
   document.getElementById("subTitle_section").innerHTML +=
-    '<img src="' + mainImgSelect + '"/>'
+    '<img src="' + mainImgSelect + '" class="fadeInLeft"/>'
 
   // let blackImgs = [
   //   "/images/Pexels/black/pexels_black.jpg",
@@ -86,3 +86,17 @@ const randomImgRender = () => {
   //   '<img src="' + greenSelect + '"/>'
 }
 randomImgRender()
+
+let introSectionAnimation = () => {
+  let introSection = document.getElementById('intro_section');
+  console.log(introSection)
+}
+
+
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY
+
+  if (scrolled == 450) {
+    introSectionAnimation()
+  }
+})
