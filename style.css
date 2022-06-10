@@ -198,6 +198,7 @@ nav span {
   justify-content: space-around;
   transition: 0.2s;
   color: rgb(220, 220, 220);
+  cursor: pointer;
 }
 
 .colorContainer:hover {
@@ -262,7 +263,7 @@ nav span {
 }
 
 .gray:hover {
-  background-color: rgb(114, 114, 114, 0.9);
+  background-color: rgba(50, 50, 50, 0.9);
   transition: 0.5s;
 }
 
@@ -288,7 +289,7 @@ nav span {
 }
 
 .violet:hover {
-  background-color: rgb(135, 27, 135, 0.9);
+  background-color: rgba(100, 16, 100, 0.9);
   transition: 0.5s;
 }
 
@@ -314,7 +315,7 @@ nav span {
 }
 
 .yellow:hover {
-  background-color: rgba(255, 255, 0, 0.9);
+  background-color: rgba(255, 217, 0, 0.863);
   transition: 0.5s;
 }
 
@@ -340,7 +341,7 @@ nav span {
 }
 
 .white:hover {
-  background-color: rgb(255, 255, 255, 0.9);
+  background-color: rgba(173, 173, 173, 0.9);
   transition: 0.5s;
 }
 
@@ -392,7 +393,7 @@ nav span {
 }
 
 .red:hover {
-  background-color: rgb(216, 25, 25, 0.9);
+  background-color: rgba(183, 21, 21, 0.9);
   transition: 0.5s;
 }
 
