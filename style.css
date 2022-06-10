@@ -157,6 +157,8 @@ nav span {
   right: 850px;
   top: 20vh;
   text-align: right;
+  height: 500px;
+  overflow: hidden;
   /* -webkit-animation: fadeInTop 1s; */
 }
 
@@ -164,13 +166,11 @@ nav span {
   font-size: 50px;
   color: rgb(220, 220, 220);
   margin-bottom: 100px;
-  overflow: hidden;
 }
 
 .textContainer p {
   font-size: 22px;
   color: rgb(220, 220, 220);
-  overflow: hidden;
 }
 
 /* -------------colorPick_section------------- */
