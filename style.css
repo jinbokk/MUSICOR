@@ -32,6 +32,10 @@ nav {
   cursor: pointer;
 }
 
+nav .linear_wipe {
+  font-size: 30px;
+}
+
 nav span {
   padding-left: 20px;
   padding-right: 20px;
@@ -68,7 +72,6 @@ nav span {
   width: 100%;
   padding-bottom: 100px;
   object-fit: cover;
-  /* -webkit-animation: fadeInLeft 1s; */
 }
 
 .subTitle {
@@ -81,7 +84,6 @@ nav span {
   position: absolute;
   top: 200px;
   left: 100px;
-  /* -webkit-animation: fadeInTop 1s; */
   z-index: 1;
 }
 
@@ -97,8 +99,6 @@ nav span {
 
 .introContainer img {
   height: 100%;
-  background-image: url("images/Pexels/pexcels_colorful.jpg");
-  background-repeat: none;
   object-fit: cover;
   position: absolute;
   right: 0;
@@ -136,7 +136,7 @@ nav span {
   height: 200px;
   border-radius: 10px;
   margin: 50px;
-  padding-left: 13px;
+  padding: 13px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -418,7 +418,7 @@ nav span {
   color: rgb(220, 220, 220);
   display: block;
   height: 100%;
-  width: 50%;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -426,6 +426,7 @@ nav span {
 .col p {
   font-size: 13px;
   font-weight: 600;
+  color:rgb(140, 140, 140)
 }
 
 .col a {
