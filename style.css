@@ -107,9 +107,9 @@ nav span {
 .textContainer {
   position: absolute;
   right: 850px;
-  top: 20vh;
+  top: 10vh;
   text-align: right;
-  height: 500px;
+  height: 80%;
   overflow: hidden;
 }
 
@@ -117,11 +117,13 @@ nav span {
   font-size: 50px;
   color: rgb(220, 220, 220);
   margin-bottom: 100px;
+  line-height: 12vh;
 }
 
 .textContainer p {
   font-size: 22px;
   color: rgb(220, 220, 220);
+  line-height: 7vh;
 }
 
 /* -------------colorPick_section------------- */
