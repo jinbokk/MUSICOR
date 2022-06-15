@@ -145,6 +145,7 @@ nav span {
   transition: 0.2s;
   color: rgb(220, 220, 220);
   cursor: pointer;
+  will-change: contents,scroll-position;
 }
 
 .colorContainer:hover {
