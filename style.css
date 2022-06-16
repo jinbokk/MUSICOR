@@ -132,6 +132,7 @@ nav span {
 .colorPick_container {
   display: flex;
   justify-content: center;
+  height: 100vh;
 }
 
 .colorContainer {
@@ -146,7 +147,7 @@ nav span {
   transition: 0.2s;
   color: rgb(220, 220, 220);
   cursor: pointer;
-  will-change: contents,scroll-position;
+  will-change: contents, scroll-position;
 }
 
 .colorContainer:hover {
@@ -393,9 +394,20 @@ nav span {
   transition: 0.3s;
 }
 
-.green:hover{
+.green:hover {
   background-color: rgb(0, 83, 8, 0.9);
   transition: 0.2s;
+}
+
+/* -------------colorPick_section_page_2------------- */
+
+#colorPick_section_page_2 {
+  height: 100vh;
+}
+
+.page_2_black {
+  background-color: red;
+  transition: 2s;
 }
 
 /* -------------footer_section------------- */
@@ -430,7 +442,7 @@ nav span {
 .col p {
   font-size: 13px;
   font-weight: 600;
-  color:rgb(140, 140, 140)
+  color: rgb(140, 140, 140)
 }
 
 .col a {
