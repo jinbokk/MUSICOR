@@ -72,6 +72,7 @@ nav span {
   width: 100%;
   padding-bottom: 100px;
   object-fit: cover;
+  will-change: contents;
 }
 
 .subTitle {

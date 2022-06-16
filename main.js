@@ -1,4 +1,4 @@
-const randomImgRender = () => {
+const randomImgRender = (function () {
   let mainImgs = [
     "/images/freepik/freepik_background_ (1).jpg",
     "/images/freepik/freepik_background_ (2).jpg",
@@ -8,10 +8,8 @@ const randomImgRender = () => {
 
   document.getElementById("subTitle_section").innerHTML +=
     '<img src="' + mainImgSelect + '" class="scrolled fade-in"/>'
-}
-randomImgRender()
+})();
 
- 
 const scrollElements = document.querySelectorAll(".js-scroll");
 
 const elementInView = (el, dividend = 1) => {
@@ -49,6 +47,13 @@ const handleScrollAnimation = () => {
   })
 }
 
-window.addEventListener("scroll", () => { 
+window.addEventListener("scroll", () => {
   handleScrollAnimation();
+});
+
+let colorPickSection = document.querySelectorAll("div.colorContainer")
+colorPickSection.forEach((ele) => {
+  ele.addEventListener("click", () => {
+    console.log(ele)
+  })
 });
