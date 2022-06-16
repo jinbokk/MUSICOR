@@ -54,6 +54,26 @@ window.addEventListener("scroll", () => {
 let colorPickSection = document.querySelectorAll("div.colorContainer")
 colorPickSection.forEach((ele) => {
   ele.addEventListener("click", () => {
-    console.log(ele)
+    console.log(ele.id)
+
+    if(ele.id == "black") {
+//function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+    } else if (ele.id=="gray") {
+//function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+    } else if (ele.id=="violet") {
+//function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+    } else if (ele.id=="yellow") {
+//function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+    } else if (ele.id=="white") {
+//function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+    } else if (ele.id=="orange") {
+//function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+    } else if (ele.id=="red") {
+//function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+    } else if (ele.id=="blue") {
+//function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+    } else if (ele.id=="green") {
+//function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+    }
   })
 });
