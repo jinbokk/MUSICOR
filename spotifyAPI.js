@@ -1,26 +1,3 @@
-// let request = require('request');
-// let client_id = 'f5d847d6012d455ab5e1c80a3011f215';
-// let client_secret = 'a5fbc11da2cf4878a5bdd9998a14c64a';
-
-// let authOptions = {
-//   url: 'https://accounts.spotify.com/api/token',
-//   headers: {
-//     'Authorization': 'Basic ' + (new Buffer.from(client_id + ':' + client_secret).toString('base64'))
-//   },
-//   form: {
-//     grant_type: 'client_credentials'
-//   },
-//   json: true
-// };
-
-// let getToken = request.post(authOptions, function (error, response, body) {
-//   if (!error && response.statusCode === 200) {
-//     return body.access_token;
-//   }
-// });
-
-
-// javascript iife (Immediately Invoked Function Expression)
 const APIController = (function () {
 
     const clientId = 'f5d847d6012d455ab5e1c80a3011f215';
@@ -44,7 +21,7 @@ const APIController = (function () {
 
     const _getGenres = async (token) => {
 
-        const result = await fetch(`https://api.spotify.com/v1/browse/categories?locale=sv_US`, {
+        const result = await fetch(`https://api.spotify.com/v1/browse/categories?locale=US`, {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + token

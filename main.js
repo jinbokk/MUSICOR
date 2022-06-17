@@ -52,19 +52,19 @@ window.addEventListener("scroll", () => {
 });
 
 
-let colorPickSectionPage2Render = () => {
+let CPSP2Render = () => {
   
 }
 
 
-let colorPickSection = document.querySelectorAll("div.colorContainer")
-colorPickSection.forEach((ele) => {
+let CPS = document.querySelectorAll("div.colorContainer")
+CPS.forEach((ele) => {
   ele.addEventListener("click", () => {
     console.log(ele.id)
 
     if (ele.id == "black") {
       document.getElementById("colorPick_section").innerHTML = 
-      '<div id="colorPick_section_page_2">page2</div>'
+      '<div id="select_genre">`${ele.id}`</div>'
     } else if (ele.id == "gray") {
       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
     } else if (ele.id == "violet") {
