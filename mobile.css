@@ -96,14 +96,22 @@
     justify-content: left;
     width: 100vw;
     overflow: scroll;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .colorContainer {
-    margin-bottom: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
   .colorContainer h3 {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 400;
   }
 
