@@ -6,44 +6,89 @@
 
   nav {
     position: fixed;
-    left: 0;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  nav span {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+  .blank {
+    height: 100px;
+  }
+
+  /* -------------sidebar------------- */
+
+  .sidebar_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
     top: 0;
-    width: 100vw;
-    height: 60px;
+    left: -300px;
+    z-index: 3;
+    background-color: rgb(15, 15, 15);
+    height: 100vh;
+    width: 300px;
+    opacity: 0;
+    transition: .4s;
+  }
+
+  .sidebar_menu {
+    margin-left: 20px;
+  }
+
+  /* -------------userInfo------------- */
+
+  #userInfo_icon {
+    display: none;
+  }
+
+  .userInfo_container {
+    width: 250px;
   }
 
   /* -------------subTitle_section------------- */
 
   #subTitle_section img {
     object-fit: cover;
-    object-position: -1000px;
+    object-position: -1150px;
   }
 
   .subTitle {
     position: absolute;
-    top: 100px;
+    top: 130px;
     left: 30px;
     width: 80vw;
     font-size: 18vw;
     letter-spacing: 20px;
-    line-height: 15vh;
+    line-height: 170px;
   }
 
   /* -------------intro_section------------- */
 
   .introContainer img {
-    object-position: 200px;
+    object-position: 300px;
   }
 
   .textContainer {
     position: absolute;
-    left: 20px;
+    top: 150px;
+    left: 40px;
     width: 90vw;
     text-align: left;
   }
 
   .textContainer h1 {
     margin-bottom: 30px;
+  }
+
+  .textContainer p {
+    display: none;
   }
 
   /* -------------colorPick_section------------- */
@@ -55,14 +100,14 @@
   }
 
   .colorContainer {
-    margin: 50px;
+    margin-bottom: 50px;
   }
-  
+
   .colorContainer h3 {
     font-size: 20px;
     font-weight: 400;
   }
-  
+
   .colorContainer p {
     font-size: 8px;
     font-weight: 200;

@@ -52,35 +52,49 @@ window.addEventListener("scroll", () => {
 });
 
 
-// let CPSP2Render = () => {
-  
-// }
+const page_pointer = document.querySelectorAll(".pagePointer span")
+
+const pages = document.querySelectorAll("section")
+const navOffsetTop = document.querySelector("nav").offsetHeight;
+
+const firstTop = pages[0].offsetTop-navOffsetTop;
+const secondTop = pages[1].offsetTop-navOffsetTop;
+const thirdTop = pages[2].offsetTop;
+console.log(thirdTop)
+
+page_pointer[0].addEventListener("click", () => {
+  window.scroll({
+    top: firstTop,
+    behavior: "smooth"
+  })
+})
+
+page_pointer[1].addEventListener("click", () => {
+  window.scroll({
+    top: secondTop,
+    behavior: "smooth"
+  })
+})
+
+page_pointer[2].addEventListener("click", () => {
+  window.scroll({
+    top: thirdTop,
+    behavior: "smooth"
+  })
+})
+
+let CPS = document.querySelectorAll("div.colorContainer")
+CPS.forEach((ele) => {
+  ele.addEventListener("click", () => {
+    console.log(ele)
+    console.log(ele.id)
+    console.log(ele.className)
 
 
-// let CPS = document.querySelectorAll("div.colorContainer")
-// CPS.forEach((ele) => {
-//   ele.addEventListener("click", () => {
-//     console.log(ele.id)
 
-//     if (ele.id == "black") {
-//       document.getElementById("colorPick_section").innerHTML = 
-//       '<div id="select_genre">`${ele.id}`</div>'
-//     } else if (ele.id == "gray") {
-//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-//     } else if (ele.id == "violet") {
-//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-//     } else if (ele.id == "yellow") {
-//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-//     } else if (ele.id == "white") {
-//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-//     } else if (ele.id == "orange") {
-//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-//     } else if (ele.id == "red") {
-//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-//     } else if (ele.id == "blue") {
-//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-//     } else if (ele.id == "green") {
-//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-//     }
-//   })
-// });
+    let colorPickContainer = document.getElementById("colorPick_container")
+    // colorPickContainer.innerHTML =
+    //   '<div id="select_genre">testing</div>'
+
+  })
+});
