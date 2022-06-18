@@ -59,7 +59,7 @@ const navOffsetTop = document.querySelector("nav").offsetHeight;
 
 const firstTop = pages[0].offsetTop-navOffsetTop;
 const secondTop = pages[1].offsetTop-navOffsetTop;
-const thirdTop = pages[2].offsetTop;
+const thirdTop = pages[2].offsetTop-navOffsetTop;
 console.log(thirdTop)
 
 page_pointer[0].addEventListener("click", () => {

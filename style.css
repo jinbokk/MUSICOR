@@ -47,12 +47,13 @@ nav span {
 }
 
 .blank {
-  height: 200px;
+  height: 100px;
 }
 
 /* -------------pagePointer------------- */
 
 .pagePointer_container {
+  z-index:5;
   position: fixed;
   bottom: 0;
   width: 100vw;
@@ -319,11 +320,13 @@ nav span {
 #intro_section {
   position: relative;
   height: 100vh;
+  padding-bottom: 60px;
   /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .introContainer img {
   height: 100vh;
+  padding-bottom: 60px;
   object-fit: cover;
   position: absolute;
   right: 0;
@@ -331,18 +334,22 @@ nav span {
 
 .textContainer {
   position: absolute;
-  right: 850px;
-  top: 60px;
-  text-align: right;
-  height: 80%;
+  width: 80%;
+  left: 150px;
+  text-align: left;
+  height: 100%;
   overflow: hidden;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 60px;
 }
 
 .textContainer h1 {
   font-size: 50px;
   color: rgb(220, 220, 220);
-  margin-bottom: 100px;
   line-height: 12vh;
+  margin-bottom: 60px;
 }
 
 .textContainer p {
@@ -359,6 +366,7 @@ nav span {
   align-items: center;
   height: 100vh;
   overflow: scroll;
+  padding-bottom: 100px;
 }
 
 .colorContainer {
@@ -643,6 +651,7 @@ nav span {
 
 .footer_section {
   border-top: 1px solid rgb(255, 255, 255, 0.3);
+  margin-top: 30px;
   height: 350px;
 }
 
