@@ -52,35 +52,35 @@ window.addEventListener("scroll", () => {
 });
 
 
-let CPSP2Render = () => {
+// let CPSP2Render = () => {
   
-}
+// }
 
 
-let CPS = document.querySelectorAll("div.colorContainer")
-CPS.forEach((ele) => {
-  ele.addEventListener("click", () => {
-    console.log(ele.id)
+// let CPS = document.querySelectorAll("div.colorContainer")
+// CPS.forEach((ele) => {
+//   ele.addEventListener("click", () => {
+//     console.log(ele.id)
 
-    if (ele.id == "black") {
-      document.getElementById("colorPick_section").innerHTML = 
-      '<div id="select_genre">`${ele.id}`</div>'
-    } else if (ele.id == "gray") {
-      //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-    } else if (ele.id == "violet") {
-      //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-    } else if (ele.id == "yellow") {
-      //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-    } else if (ele.id == "white") {
-      //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-    } else if (ele.id == "orange") {
-      //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-    } else if (ele.id == "red") {
-      //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-    } else if (ele.id == "blue") {
-      //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-    } else if (ele.id == "green") {
-      //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
-    }
-  })
-});
+//     if (ele.id == "black") {
+//       document.getElementById("colorPick_section").innerHTML = 
+//       '<div id="select_genre">`${ele.id}`</div>'
+//     } else if (ele.id == "gray") {
+//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+//     } else if (ele.id == "violet") {
+//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+//     } else if (ele.id == "yellow") {
+//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+//     } else if (ele.id == "white") {
+//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+//     } else if (ele.id == "orange") {
+//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+//     } else if (ele.id == "red") {
+//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+//     } else if (ele.id == "blue") {
+//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+//     } else if (ele.id == "green") {
+//       //function 구현 해야 함 > 컬러에 맞는 태그 불러오기
+//     }
+//   })
+// });
