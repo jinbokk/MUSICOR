@@ -90,8 +90,6 @@ CPS.forEach((ele) => {
     console.log(ele.id)
     console.log(ele.className)
 
-
-
     let colorPickContainer = document.getElementById("colorPick_container")
     // colorPickContainer.innerHTML =
     //   '<div id="select_genre">testing</div>'

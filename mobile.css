@@ -116,7 +116,7 @@
   }
 
   .colorContainer p {
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 200;
   }
 
@@ -157,4 +157,8 @@
     margin-bottom: 13px;
   }
 
+  .footerImg img {
+    transform: scale(.85);
+    transform-origin: left;
+  }
 }
