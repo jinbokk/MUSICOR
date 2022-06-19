@@ -57,9 +57,9 @@ const page_pointer = document.querySelectorAll(".pagePointer span")
 const pages = document.querySelectorAll("section")
 const navOffsetTop = document.querySelector("nav").offsetHeight;
 
-const firstTop = pages[0].offsetTop-navOffsetTop;
-const secondTop = pages[1].offsetTop-navOffsetTop;
-const thirdTop = pages[2].offsetTop-navOffsetTop;
+const firstTop = pages[0].offsetTop - navOffsetTop;
+const secondTop = pages[1].offsetTop - navOffsetTop;
+const thirdTop = pages[2].offsetTop - navOffsetTop;
 console.log(thirdTop)
 
 page_pointer[0].addEventListener("click", () => {
@@ -83,7 +83,11 @@ page_pointer[2].addEventListener("click", () => {
   })
 })
 
-let CPS = document.querySelectorAll("div.colorContainer")
+const movePage = () => {
+  //진행중
+}
+
+const CPS = document.querySelectorAll("div.colorContainer")
 CPS.forEach((ele) => {
   ele.addEventListener("click", () => {
     console.log(ele)
@@ -91,8 +95,22 @@ CPS.forEach((ele) => {
     console.log(ele.className)
 
     let colorPickContainer = document.getElementById("colorPick_container")
-    // colorPickContainer.innerHTML =
-    //   '<div id="select_genre">testing</div>'
-
+    // colorPickContainer.addEventListener("click",movePage()=>{
+    //   // 1.컬러컨테이너 클릭시, 페이지 이동
+    //   // 2.해당 페이지는..
+    // })
   })
 });
+
+
+// music player
+
+const likeSong = document.getElementById("like_song")
+
+likeSong.addEventListener("click", (e) => {
+  if (e.target.style.filter == false) {
+    e.target.style.filter = "invert(10%) sepia(100%) saturate(7497%) hue-rotate(3deg) brightness(106%) contrast(110%)"
+  } else {
+    e.target.style.removeProperty("filter")
+  }
+})

@@ -21,7 +21,7 @@ const APIController = (function () {
 
     const _getGenres = async (token) => {
 
-        const result = await fetch(`https://api.spotify.com/v1/browse/categories?locale=US`, {
+        const result = await fetch(`https://api.spotify.com/v1/browse/categories?locale=kr`, {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + token
@@ -215,7 +215,7 @@ const APPController = (function(UICtrl, APICtrl) {
         const genreSelect = UICtrl.inputField().genre;       
         // get the genre id associated with the selected genre
         const genreId = genreSelect.options[genreSelect.selectedIndex].value;             
-        // ge the playlist based on a genre
+        // get the playlist based on a genre
         const playlist = await APICtrl.getPlaylistByGenre(token, genreId);       
         // create a playlist list item for every playlist returned
         playlist.forEach(p => UICtrl.createPlaylist(p.name, p.tracks.href));
