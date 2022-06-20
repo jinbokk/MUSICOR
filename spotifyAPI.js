@@ -95,7 +95,7 @@ const APIController = (function () {
 })();
 
 // UI Module
-const UIController = (function() {
+const UIController = (function () {
 
     //object to hold references to html selectors
     const DOMElements = {
@@ -125,7 +125,7 @@ const UIController = (function() {
         createGenre(text, value) {
             const html = `<option value="${value}">${text}</option>`;
             document.querySelector(DOMElements.selectGenre).insertAdjacentHTML('beforeend', html);
-        }, 
+        },
 
         createPlaylist(text, value) {
             const html = `<option value="${value}">${text}</option>`;
@@ -145,19 +145,16 @@ const UIController = (function() {
             // any time user clicks a new song, we need to clear out the song detail div
             detailDiv.innerHTML = '';
 
-            const html = 
-            `
-            <div class="row col-sm-12 px-0">
-                <img src="${img}" alt="">        
-            </div>
-            <div class="row col-sm-12 px-0">
-                <label for="Genre" class="form-label col-sm-12">${title}:</label>
-            </div>
-            <div class="row col-sm-12 px-0">
-                <label for="artist" class="form-label col-sm-12">By ${artist}:</label>
-            </div> 
+            const html =
+                `
+                <div>
+                    <img class="albumCover" src="${img}" alt="">
+                    <div class="albumCover_text">
+                        <h2><label for="Genre">${title}</label></h2>
+                        <p><label for="artist">By ${artist}</label></p>
+                    </div>        
+                </div>
             `;
-
             detailDiv.insertAdjacentHTML('beforeend', html)
         },
 
@@ -174,7 +171,7 @@ const UIController = (function() {
             this.inputField().playlist.innerHTML = '';
             this.resetTracks();
         },
-        
+
         storeToken(value) {
             document.querySelector(DOMElements.hfToken).value = value;
         },
@@ -188,7 +185,7 @@ const UIController = (function() {
 
 })();
 
-const APPController = (function(UICtrl, APICtrl) {
+const APPController = (function (UICtrl, APICtrl) {
 
     // get input field object ref
     const DOMInputs = UICtrl.inputField();
@@ -196,7 +193,7 @@ const APPController = (function(UICtrl, APICtrl) {
     // get genres on page load
     const loadGenres = async () => {
         //get the token
-        const token = await APICtrl.getToken();           
+        const token = await APICtrl.getToken();
         //store the token onto the page
         UICtrl.storeToken(token);
         //get the genres
@@ -210,17 +207,17 @@ const APPController = (function(UICtrl, APICtrl) {
         //reset the playlist
         UICtrl.resetPlaylist();
         //get the token that's stored on the page
-        const token = UICtrl.getStoredToken().token;        
+        const token = UICtrl.getStoredToken().token;
         // get the genre select field
-        const genreSelect = UICtrl.inputField().genre;       
+        const genreSelect = UICtrl.inputField().genre;
         // get the genre id associated with the selected genre
-        const genreId = genreSelect.options[genreSelect.selectedIndex].value;             
+        const genreId = genreSelect.options[genreSelect.selectedIndex].value;
         // get the playlist based on a genre
-        const playlist = await APICtrl.getPlaylistByGenre(token, genreId);       
+        const playlist = await APICtrl.getPlaylistByGenre(token, genreId);
         // create a playlist list item for every playlist returned
         playlist.forEach(p => UICtrl.createPlaylist(p.name, p.tracks.href));
     });
-     
+
 
     // create submit button click event listener
     DOMInputs.submit.addEventListener('click', async (e) => {
@@ -229,7 +226,7 @@ const APPController = (function(UICtrl, APICtrl) {
         // clear tracks
         UICtrl.resetTracks();
         //get the token
-        const token = UICtrl.getStoredToken().token;        
+        const token = UICtrl.getStoredToken().token;
         // get the playlist field
         const playlistSelect = UICtrl.inputField().playlist;
         // get track endpoint based on the selected playlist
@@ -238,7 +235,7 @@ const APPController = (function(UICtrl, APICtrl) {
         const tracks = await APICtrl.getTracks(token, tracksEndPoint);
         // create a track list item
         tracks.forEach(el => UICtrl.createTrack(el.track.href, el.track.name))
-        
+
     });
 
     // create song selection click event listener
@@ -254,7 +251,7 @@ const APPController = (function(UICtrl, APICtrl) {
         const track = await APICtrl.getTrack(token, trackEndpoint);
         // load the track details
         UICtrl.createTrackDetail(track.album.images[0].url, track.name, track.artists[0].name);
-    });    
+    });
 
     return {
         init() {

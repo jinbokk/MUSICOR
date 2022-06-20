@@ -708,7 +708,6 @@ nav span {
 /* -------------music_player------------- */
 
 .musicPlayContainer {
-  background-color: red;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -718,18 +717,20 @@ nav span {
 .albumCover {
   width: 300px;
   height: 300px;
-  background-color: bisque;
-  border-radius: 10px;
-  margin-bottom: 30px;
+  border-radius: 4%;
+  margin-bottom: 20px;
+  object-fit: contain;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 10px 50px;}
+
+.albumCover_text {
+  color: rgb(220, 220, 220);
+  text-align: right;
 }
-
-
 
 .UIContainer {
   display: flex;
   justify-content: center;
   font-size: 30px;
-  background-color: violet;
   width: 100%;
 }
 
@@ -752,11 +753,3 @@ nav span {
 .UIContainer i:last-child {
   padding-left: 40px;
 }
-
-/* .UIContainer i:last-child:active {
-  filter: invert(10%) sepia(100%) saturate(7497%) hue-rotate(3deg) brightness(106%) contrast(110%);
-}
-
-.UIContainer i:last-child:focus {
-  filter: invert(10%) sepia(100%) saturate(7497%) hue-rotate(3deg) brightness(106%) contrast(110%);
-} */

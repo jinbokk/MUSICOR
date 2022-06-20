@@ -106,7 +106,6 @@ CPS.forEach((ele) => {
 // music player
 
 const likeSong = document.getElementById("like_song")
-
 likeSong.addEventListener("click", (e) => {
   if (e.target.style.filter == false) {
     e.target.style.filter = "invert(10%) sepia(100%) saturate(7497%) hue-rotate(3deg) brightness(106%) contrast(110%)"

@@ -58,7 +58,7 @@
     <div class="userInfo_content">
       <img src="/images/etc/profile_image.jpg" class="userInfo_image" />
       <h2 class="pt-4">Hello, <span style="text-decoration:underline">LISTENER</span></h2>
-      <h5>nice to see you !</h5>
+      <h5>nice to see you &#10024;</h5>
     </div>
     <div class="userInfo_menu">
       <div><i class="fa-solid fa-music"></i>Add to Playlist</div>
@@ -186,7 +186,8 @@
 
 <div class="musicPlayContainer">
   <div>
-    <div class="albumCover">albumCoverImg</div>
+    <div id="song-detail">
+    </div>
   </div>
 
   <div class="UIContainer">
@@ -195,6 +196,13 @@
     <i class="fa-solid fa-circle-pause"></i>
     <i class="fa-solid fa-forward"></i>
     <i class="fa-solid fa-heart" id="like_song"></i>
+  </div>
+
+  <!-- Play music from YOUTUBE -->
+  <div>
+<audio controls>
+
+</audio>
   </div>
 </div>
 
@@ -232,7 +240,7 @@
       <div class="list-group song-list">
       </div>
     </div>
-    <div class="offset-md-1 col-sm-4" id="song-detail">
+    <div class="offset-md-1 col-sm-4">
     </div>
   </div>
 </div>
