@@ -262,6 +262,7 @@ nav span {
   align-items: left;
   justify-content: space-around;
   padding-left: 20px;
+  cursor: pointer;
 }
 
 .userInfo_menu div {
