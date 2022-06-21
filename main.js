@@ -90,9 +90,7 @@ const movePage = () => {
 const CPS = document.querySelectorAll("div.colorContainer")
 CPS.forEach((ele) => {
   ele.addEventListener("click", () => {
-    console.log(ele)
     console.log(ele.id)
-    console.log(ele.className)
 
     let colorPickContainer = document.getElementById("colorPick_container")
     // colorPickContainer.addEventListener("click",movePage()=>{
@@ -108,7 +106,7 @@ CPS.forEach((ele) => {
 const likeSong = document.getElementById("like_song")
 likeSong.addEventListener("click", (e) => {
   if (e.target.style.filter == false) {
-    e.target.style.filter = "invert(10%) sepia(100%) saturate(7497%) hue-rotate(3deg) brightness(106%) contrast(110%)"
+    e.target.style.filter = "invert(15%) sepia(81%) saturate(7389%) hue-rotate(358deg) brightness(102%) contrast(116%)"
   } else {
     e.target.style.removeProperty("filter")
   }

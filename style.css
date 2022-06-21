@@ -751,5 +751,7 @@ nav span {
 }
 
 .UIContainer i:last-child {
+  transform: none;
+  transition: none;
   padding-left: 40px;
 }

@@ -15,13 +15,27 @@ const APIController = (function () {
         });
 
         const data = await result.json();
+        console.log(data)
         return data.access_token;
+    }
+
+    const _getAvailableGenreSeeds = async (token) => {
+
+        const result = await fetch(`https://api.spotify.com/v1/recommendations/available-genre-seeds`, {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        });
+
+        const data = await result.json();
+        console.log(data)
     }
 
 
     const _getGenres = async (token) => {
 
-        const result = await fetch(`https://api.spotify.com/v1/browse/categories?locale=kr`, {
+        const result = await fetch(`https://api.spotify.com/v1/browse/categories?locale=ES`, {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + token
@@ -49,7 +63,7 @@ const APIController = (function () {
 
     const _getTracks = async (token, tracksEndPoint) => {
 
-        const limit = 10;
+        const limit = 20;
 
         const result = await fetch(`${tracksEndPoint}?limit=${limit}`, {
             method: 'GET',
@@ -78,6 +92,9 @@ const APIController = (function () {
     return {
         getToken() {
             return _getToken();
+        },
+        getAvailableGenreSeeds(token) {
+            return _getAvailableGenreSeeds(token)
         },
         getGenres(token) {
             return _getGenres(token);
@@ -190,6 +207,14 @@ const APPController = (function (UICtrl, APICtrl) {
     // get input field object ref
     const DOMInputs = UICtrl.inputField();
 
+    const loadAvailableGenreSeeds = async () => {
+        const token = await APICtrl.getToken();
+        //store the token onto the page
+        UICtrl.storeToken(token);
+        //get available genre seeds
+        const availableGenres = await APICtrl.getAvailableGenreSeeds(token);
+    }
+
     // get genres on page load
     const loadGenres = async () => {
         //get the token
@@ -216,6 +241,7 @@ const APPController = (function (UICtrl, APICtrl) {
         const playlist = await APICtrl.getPlaylistByGenre(token, genreId);
         // create a playlist list item for every playlist returned
         playlist.forEach(p => UICtrl.createPlaylist(p.name, p.tracks.href));
+        console.log(playlist)
     });
 
 
@@ -256,6 +282,7 @@ const APPController = (function (UICtrl, APICtrl) {
     return {
         init() {
             console.log('App is starting');
+            loadAvailableGenreSeeds();
             loadGenres();
         }
     }
@@ -264,3 +291,33 @@ const APPController = (function (UICtrl, APICtrl) {
 
 // will need to call a method to load the genres on page load
 APPController.init();
+
+
+
+
+
+
+// const play = ({
+//     spotify_uri,
+//     playerInstance: {
+//       _options: {
+//         getOAuthToken
+//       }
+//     }
+//   }) => {
+//     getOAuthToken(access_token => {
+//       fetch(`https://api.spotify.com/v1/me/player/play?device_id=${id}`, {
+//         method: 'PUT',
+//         body: JSON.stringify({ uris: [spotify_uri] }),
+//         headers: {
+//           'Content-Type': 'application/json',
+//           'Authorization': `Bearer ${access_token}`
+//         },
+//       });
+//     });
+//   };
+
+//   play({
+//     playerInstance: new Spotify.Player({ name: "..." }),
+//     spotify_uri: 'spotify:track:7xGfFoTpQ2E7fRF5lN10tr',
+//   });
