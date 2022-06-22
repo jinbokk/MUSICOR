@@ -83,24 +83,6 @@ page_pointer[2].addEventListener("click", () => {
   })
 })
 
-const movePage = () => {
-  //진행중
-}
-
-const CPS = document.querySelectorAll("div.colorContainer")
-CPS.forEach((ele) => {
-  ele.addEventListener("click", () => {
-    console.log(ele.id)
-
-    let colorPickContainer = document.getElementById("colorPick_container")
-    // colorPickContainer.addEventListener("click",movePage()=>{
-    //   // 1.컬러컨테이너 클릭시, 페이지 이동
-    //   // 2.해당 페이지는..
-    // })
-  })
-});
-
-
 // music player
 
 const likeSong = document.getElementById("like_song")
