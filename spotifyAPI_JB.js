@@ -41,7 +41,7 @@ const getAvailableGenreSeeds = async () => {
 const giveGenreToColor = async () => {
 
   const data = await getAvailableGenreSeeds();
-  console.log(data)
+  console.log(data);
 
   const genres_black = [data.genres[52]];
   const genres_gray = [data.genres[2], data.genres[16], data.genres[103]];
@@ -53,15 +53,15 @@ const giveGenreToColor = async () => {
   const genres_blue = [data.genres[67], data.genres[94], data.genres[100]];
   const genres_green = [data.genres[0], data.genres[9], data.genres[110], data.genres[115]];
 
-  console.log(genres_black)
-  console.log(genres_gray)
-  console.log(genres_violet)
-  console.log(genres_yellow)
-  console.log(genres_white)
-  console.log(genres_orange)
-  console.log(genres_red)
-  console.log(genres_blue)
-  console.log(genres_green)
+  console.log(genres_black);
+  console.log(genres_gray);
+  console.log(genres_violet);
+  console.log(genres_yellow);
+  console.log(genres_white);
+  console.log(genres_orange);
+  console.log(genres_red);
+  console.log(genres_blue);
+  console.log(genres_green);
 
   const DOMElements = {
     black: '#black',
@@ -74,27 +74,36 @@ const giveGenreToColor = async () => {
     blue: '#blue',
     green: '#green'
   }
-  console.log(DOMElements)
+  console.log(DOMElements);
 
 
   // Select specific genreId by colorContainer's colorId
-  const colorContainer = document.querySelectorAll("div.colorContainer")
+  const colorContainer = document.querySelectorAll("div .colorContainer");
 
   colorContainer.forEach((e) => {
     e.addEventListener("click", () => {
       const genresByColor = eval(`genres_${e.id}`);
+      console.log(genresByColor);
       const num = (Math.floor(Math.random() * genresByColor.length));
-      console.log(num)
-      console.log(genresByColor)
-      console.log(genresByColor[num])
-      const genreId = genresByColor[num]
-      return genreId
-    })
-  })
-  // const genreId = result
-  // return genreId
+      console.log(num);
+      const genreIdByColor = genresByColor[num];
+      console.log(genresByColor[num]);
+      return genreIdByColor;
+    });
+  });
+
+  const genreId = "위 forEach로 발생한 함수의 결과값."
+  return genreId;
 }
 giveGenreToColor();
+
+
+
+let testing = async () => {
+  let test = await giveGenreToColor();
+  console.log(test)
+}
+testing()
 
 
 
