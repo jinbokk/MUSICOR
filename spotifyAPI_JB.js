@@ -79,6 +79,7 @@ const giveGenreToColor = async () => {
 
   // Select specific genreId by colorContainer's colorId
   const colorContainer = document.querySelectorAll("div .colorContainer");
+  console.log(colorContainer);
 
   colorContainer.forEach((e) => {
     e.addEventListener("click", () => {
@@ -92,22 +93,22 @@ const giveGenreToColor = async () => {
     });
   });
 
-  const genreId = "위 forEach로 발생한 함수의 결과값."
-  return genreId;
+  // const genreId = aa
+  // return genreId;
 }
 giveGenreToColor();
 
 
 
-let testing = async () => {
-  let test = await giveGenreToColor();
-  console.log(test)
-}
-testing()
+// let testing = async () => {
+//   let test = await giveGenreToColor();
+//   console.log(test)
+// }
+// testing()
 
 
 
-// Get Track By Genre
+// // Get Track By Genre
 // const getTrackByGenre = async () => {
 
 //   const token = await getToken();
@@ -116,10 +117,10 @@ testing()
 //   const limit = 10;
 
 //   const result = await fetch(`https://api.spotify.com/v1/browse/categories/${genreId}/playlists?limit=${limit}`, {
-//       method: 'GET',
-//       headers: {
-//           'Authorization': 'Bearer ' + token
-//       }
+//     method: 'GET',
+//     headers: {
+//       'Authorization': 'Bearer ' + token
+//     }
 //   });
 
 //   const data = await result.json();
@@ -128,3 +129,20 @@ testing()
 
 // }
 // getTrackByGenre();
+
+// Get Track
+const getTrack = async () => {
+
+  const token = await getToken();
+  
+  const result = await fetch(11dFghVXANMlKmJXsNCbNl, {
+    method: 'GET',
+    headers: {
+      'Authorization': 'Bearer ' + token
+    }
+  });
+
+  const data = await result.json();
+  return data;
+}
+getTrack();
