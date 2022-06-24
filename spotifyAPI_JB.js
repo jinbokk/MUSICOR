@@ -38,56 +38,167 @@ const giveGenreToColor = async () => {
   const data = await getAvailableGenreSeeds();
 
   const genres_black = [data.genres[52]];
-  const genres_gray = [data.genres[2], data.genres[16], data.genres[103]];
-  const genres_violet = [data.genres[12], data.genres[95]];
-  const genres_yellow = [data.genres[21], data.genres[47]];
+  const genres_gray = [data.genres[52], data.genres[2], data.genres[94], data.genres[16]];
+  const genres_violet = [data.genres[94]];
+  const genres_yellow = [data.genres[94], data.genres[100]];
   const genres_white = [data.genres[4], data.genres[85]];
   const genres_orange = [data.genres[18], data.genres[31], data.genres[124]];
-  const genres_red = [data.genres[8], data.genres[66], data.genres[102]];
-  const genres_blue = [data.genres[67], data.genres[94], data.genres[100]];
-  const genres_green = [data.genres[0], data.genres[9], data.genres[110], data.genres[115]];
+  const genres_red = [data.genres[8]];
+  const genres_blue = [data.genres[94]];
+  const genres_green = [data.genres[0], data.genres[110], data.genres[115]];
 
   const colorContainer = document.querySelector(".colorPick_container");
 
   colorContainer.addEventListener("click", (e) => {
     const color = e.target
     if (color.classList.contains('colorContainer')) {
-      
+
       const genresByColor = eval(`genres_${color.id}`);
       const num = (Math.floor(Math.random() * genresByColor.length));
       const genreIdByColor = genresByColor[num];
-      console.log(genreIdByColor)
 
       const getTrackByGenre = async () => {
 
         const token = await getToken();
         const genreId = genreIdByColor;
-        const limit = 1;
-      
 
-        const result = await fetch(`https://api.spotify.com/v1/search?type=track&q=genre:${genreId}&q=year:2022&limit=${limit}&include_external=audio`, {
-          method: 'GET',
-          headers: {
-            'Authorization': 'Bearer ' + token
-          }
-        });
-
-        // const result = await fetch(`https://api.spotify.com/v1/browse/categories/${genreId}/playlists?limit=${limit}`, {
-        //   method: 'GET',
-        //   headers: {
-        //     'Authorization': 'Bearer ' + token
-        //   }
-        // });
-      
-        const data = await result.json();
-        console.log(data)
-        console.log(data.tracks.items)
-        const num = (Math.floor(Math.random() * data.tracks.items.length));
-        console.log(data.tracks.items[num].preview_url)
-        return data;
+        if (color.id == "black") {
+          console.log(genreId)
+          const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=0.9&target_danceability=0.1&min_tempo=50&min-popularity=80`, {
+            method: 'GET',
+            headers: {
+              'Authorization': 'Bearer ' + token
+            }
+          });
+          const data = await result.json();
+          console.log(data)
+          const num = (Math.floor(Math.random() * data.tracks.length));
+          console.log(data.tracks[num].preview_url)
+          return data;
+        } 
+        
+        else if (color.id == "gray") {
+          console.log(genreId)
+          const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=0.1&target_danceability=0.1&min_tempo=40&min-popularity=80`, {
+            method: 'GET',
+            headers: {
+              'Authorization': 'Bearer ' + token
+            }
+          });
+          const data = await result.json();
+          console.log(data)
+          const num = (Math.floor(Math.random() * data.tracks.length));
+          console.log(data.tracks[num].preview_url)
+          return data;
+        } 
+        
+        else if (color.id == "violet") {
+          console.log(genreId)
+          const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=0.5&target_danceability=0.5&min_tempo=60&min-popularity=80`, {
+            method: 'GET',
+            headers: {
+              'Authorization': 'Bearer ' + token
+            }
+          });
+          const data = await result.json();
+          console.log(data)
+          const num = (Math.floor(Math.random() * data.tracks.length));
+          console.log(data.tracks[num].preview_url)
+          return data;
+        } 
+        
+        else if (color.id == "yellow") {
+          console.log(genreId)
+          const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=0.9&target_danceability=0.9&min_tempo=144&min-popularity=80`, {
+            method: 'GET',
+            headers: {
+              'Authorization': 'Bearer ' + token
+            }
+          });
+          const data = await result.json();
+          console.log(data)
+          const num = (Math.floor(Math.random() * data.tracks.length));
+          console.log(data.tracks[num].preview_url)
+          return data;
+        } 
+        
+        else if (color.id == "white") {
+          console.log(genreId)
+          const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&min_instrumentalness=0.9&target_energy=0&target_danceability=0&min-popularity=80`, {
+            method: 'GET',
+            headers: {
+              'Authorization': 'Bearer ' + token
+            }
+          });
+          const data = await result.json();
+          console.log(data)
+          const num = (Math.floor(Math.random() * data.tracks.length));
+          console.log(data.tracks[num].preview_url)
+          return data;
+        } 
+        
+        else if (color.id == "orange") {
+          console.log(genreId)
+          const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=1&target_danceability=1&min_tempo=80&min-popularity=80`, {
+            method: 'GET',
+            headers: {
+              'Authorization': 'Bearer ' + token
+            }
+          });
+          const data = await result.json();
+          console.log(data)
+          const num = (Math.floor(Math.random() * data.tracks.length));
+          console.log(data.tracks[num].preview_url)
+          return data;
+        } 
+        
+        else if (color.id == "red") {
+          console.log(genreId)
+          const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=0.2&target_danceability=0.2&max_tempo=60&min-popularity=80`, {
+            method: 'GET',
+            headers: {
+              'Authorization': 'Bearer ' + token
+            }
+          });
+          const data = await result.json();
+          console.log(data)
+          const num = (Math.floor(Math.random() * data.tracks.length));
+          console.log(data.tracks[num].preview_url)
+          return data;
+        } 
+        
+        else if (color.id == "blue") {
+          console.log(genreId)
+          const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=0.7&target_danceability=0.7&min_tempo=60&min-popularity=80`, {
+            method: 'GET',
+            headers: {
+              'Authorization': 'Bearer ' + token
+            }
+          });
+          const data = await result.json();
+          console.log(data)
+          const num = (Math.floor(Math.random() * data.tracks.length));
+          console.log(data.tracks[num].preview_url)
+          return data;
+        } 
+        
+        else if (color.id == "green") {
+          console.log(genreId)
+          const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=0&target_danceability=0&man_tempo=70&min-popularity=80`, {
+            method: 'GET',
+            headers: {
+              'Authorization': 'Bearer ' + token
+            }
+          });
+          const data = await result.json();
+          console.log(data)
+          const num = (Math.floor(Math.random() * data.tracks.length));
+          console.log(data.tracks[num].preview_url)
+          return data;
+        }
       }
       getTrackByGenre();
-      
+
     } else {
       return;
     }
