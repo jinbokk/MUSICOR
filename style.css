@@ -361,15 +361,19 @@ nav span {
 
 /* -------------colorPick_section------------- */
 
-/* .colorPick_container {
+/* #colorPick_section {
+  pointer-events: none;
+} */
+
+.colorPick_container {
   display: flex;
   justify-content: center;
   height: 100vh;
   overflow: scroll;
   padding-bottom: 100px;
-  padding-left: 15%;
-  padding-right: 15%;
-} */
+  /* padding-left: 15%;
+  padding-right: 15%; */
+}
 
 .colorContainer {
   width: 200px;
@@ -397,11 +401,13 @@ nav span {
 .colorContainer h3 {
   font-size: 20px;
   font-weight: 600;
+  pointer-events: none;
 }
 
 .colorContainer p {
   font-size: 8px;
   font-weight: 200;
+  pointer-events: none;
 }
 
 .black {
@@ -722,7 +728,8 @@ nav span {
   border-radius: 4%;
   margin-bottom: 20px;
   object-fit: contain;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 10px 50px;}
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 10px 50px;
+}
 
 .albumCover_text {
   color: rgb(220, 220, 220);

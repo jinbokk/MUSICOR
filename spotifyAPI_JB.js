@@ -97,20 +97,20 @@ const giveGenreToColor = async () => {
   // // return genreId;
   // 위 방식을 이벤트 위임 방식으로 처리하는 것이 옳다고 답변을 받았다.
 
-  const colorContainer = document.querySelectorAll("div .colorContainer");
-  console.log(colorContainer)
+  const colorContainer = document.querySelector(".colorPick_container");
+  // console.log(colorContainer)
 
-  // colorContainer.addEventListener("click", (e) => {
-  //   console.log(e.target);
-    // const genresByColor = eval(`genres_${e.id}`);
-    // console.log(genresByColor);
-    // const num = (Math.floor(Math.random() * genresByColor.length));
-    // console.log(num);
-    // const genreIdByColor = genresByColor[num];
-    // console.log(genresByColor[num]);
-    // return genreIdByColor;
-  // })
-
+  colorContainer.addEventListener("click", (e) => {
+    const color = e.target
+    if (color.classList.contains('colorContainer')) {
+      const genresByColor = eval(`genres_${color.id}`);
+      const num = (Math.floor(Math.random() * genresByColor.length));
+      const genreIdByColor = genresByColor[num];
+      return genreIdByColor;
+    } else {
+      return;
+    }
+  })
 }
 giveGenreToColor();
 
