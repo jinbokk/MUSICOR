@@ -78,23 +78,39 @@ const giveGenreToColor = async () => {
 
 
   // Select specific genreId by colorContainer's colorId
+  // const colorContainer = document.querySelectorAll("div .colorContainer");
+  // console.log(colorContainer);
+
+  // colorContainer.forEach((e) => {
+  //   e.addEventListener("click", () => {
+  //     const genresByColor = eval(`genres_${e.id}`);
+  //     console.log(genresByColor);
+  //     const num = (Math.floor(Math.random() * genresByColor.length));
+  //     console.log(num);
+  //     const genreIdByColor = genresByColor[num];
+  //     console.log(genresByColor[num]);
+  //     return genreIdByColor;
+  //   });
+  // });
+
+  // // const genreId = aa
+  // // return genreId;
+  // 위 방식을 이벤트 위임 방식으로 처리하는 것이 옳다고 답변을 받았다.
+
   const colorContainer = document.querySelectorAll("div .colorContainer");
-  console.log(colorContainer);
+  console.log(colorContainer)
 
-  colorContainer.forEach((e) => {
-    e.addEventListener("click", () => {
-      const genresByColor = eval(`genres_${e.id}`);
-      console.log(genresByColor);
-      const num = (Math.floor(Math.random() * genresByColor.length));
-      console.log(num);
-      const genreIdByColor = genresByColor[num];
-      console.log(genresByColor[num]);
-      return genreIdByColor;
-    });
-  });
+  // colorContainer.addEventListener("click", (e) => {
+  //   console.log(e.target);
+    // const genresByColor = eval(`genres_${e.id}`);
+    // console.log(genresByColor);
+    // const num = (Math.floor(Math.random() * genresByColor.length));
+    // console.log(num);
+    // const genreIdByColor = genresByColor[num];
+    // console.log(genresByColor[num]);
+    // return genreIdByColor;
+  // })
 
-  // const genreId = aa
-  // return genreId;
 }
 giveGenreToColor();
 
@@ -131,18 +147,18 @@ giveGenreToColor();
 // getTrackByGenre();
 
 // Get Track
-const getTrack = async () => {
+// const getTrack = async () => {
 
-  const token = await getToken();
-  
-  const result = await fetch(11dFghVXANMlKmJXsNCbNl, {
-    method: 'GET',
-    headers: {
-      'Authorization': 'Bearer ' + token
-    }
-  });
+//   const token = await getToken();
 
-  const data = await result.json();
-  return data;
-}
-getTrack();
+//   const result = await fetch(`${trackEndPoint}`, {
+//     method: 'GET',
+//     headers: {
+//       'Authorization': 'Bearer ' + token
+//     }
+//   });
+
+//   const data = await result.json();
+//   return data;
+// }
+// getTrack();
