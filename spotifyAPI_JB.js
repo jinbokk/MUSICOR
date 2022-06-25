@@ -62,6 +62,7 @@ const giveGenreToColor = async () => {
         const token = await getToken();
         const genreId = genreIdByColor;
 
+
         if (color.id == "black") {
           console.log(genreId)
           const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=0.9&target_danceability=0.1&min_tempo=50&min-popularity=80`, {
@@ -73,11 +74,36 @@ const giveGenreToColor = async () => {
           const data = await result.json();
           console.log(data)
           const num = (Math.floor(Math.random() * data.tracks.length));
-          console.log(data.tracks[num].preview_url)
-          return data;
-        } 
-        
-        else if (color.id == "gray") {
+          const previewURL = data.tracks[num].preview_url
+          const previewImgURL = data.tracks[num].album.images[0].url
+          console.log(previewImgURL)
+          console.log(previewURL)
+
+
+
+//img,title,artist 등 전역변수로 빼서 코드리펙토링 해야겠다..
+
+          const detailDiv = document.getElementById("song_detail");
+          // any time user clicks a new song, we need to clear out the song detail div
+          detailDiv.innerHTML = '';
+          const html =
+            `
+      <div>
+          <img class="albumCover" src="${previewImgURL}" alt="">
+          <div class="albumCover_text">
+              <h2><label for="Genre">${title}</label></h2>
+              <p><label for="artist">By ${artist}</label></p>
+          </div>        
+      </div>
+  `;
+
+
+
+
+
+
+          detailDiv.innerHTML += html
+        } else if (color.id == "gray") {
           console.log(genreId)
           const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=0.1&target_danceability=0.1&min_tempo=40&min-popularity=80`, {
             method: 'GET',
@@ -88,11 +114,12 @@ const giveGenreToColor = async () => {
           const data = await result.json();
           console.log(data)
           const num = (Math.floor(Math.random() * data.tracks.length));
-          console.log(data.tracks[num].preview_url)
-          return data;
-        } 
-        
-        else if (color.id == "violet") {
+          console.log(num)
+          const previewURL = data.tracks[num].preview_url
+          const previewImgURL = data.tracks[num].album.images[0].url
+          console.log(previewImgURL)
+          console.log(previewURL)
+        } else if (color.id == "violet") {
           console.log(genreId)
           const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=0.5&target_danceability=0.5&min_tempo=60&min-popularity=80`, {
             method: 'GET',
@@ -103,11 +130,11 @@ const giveGenreToColor = async () => {
           const data = await result.json();
           console.log(data)
           const num = (Math.floor(Math.random() * data.tracks.length));
-          console.log(data.tracks[num].preview_url)
-          return data;
-        } 
-        
-        else if (color.id == "yellow") {
+          const previewURL = data.tracks[num].preview_url
+          const previewImgURL = data.tracks[num].album.images[0].url
+          console.log(previewImgURL)
+          console.log(previewURL)
+        } else if (color.id == "yellow") {
           console.log(genreId)
           const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=0.9&target_danceability=0.9&min_tempo=144&min-popularity=80`, {
             method: 'GET',
@@ -118,11 +145,11 @@ const giveGenreToColor = async () => {
           const data = await result.json();
           console.log(data)
           const num = (Math.floor(Math.random() * data.tracks.length));
-          console.log(data.tracks[num].preview_url)
-          return data;
-        } 
-        
-        else if (color.id == "white") {
+          const previewURL = data.tracks[num].preview_url
+          const previewImgURL = data.tracks[num].album.images[0].url
+          console.log(previewImgURL)
+          console.log(previewURL)
+        } else if (color.id == "white") {
           console.log(genreId)
           const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&min_instrumentalness=0.9&target_energy=0&target_danceability=0&min-popularity=80`, {
             method: 'GET',
@@ -133,11 +160,11 @@ const giveGenreToColor = async () => {
           const data = await result.json();
           console.log(data)
           const num = (Math.floor(Math.random() * data.tracks.length));
-          console.log(data.tracks[num].preview_url)
-          return data;
-        } 
-        
-        else if (color.id == "orange") {
+          const previewURL = data.tracks[num].preview_url
+          const previewImgURL = data.tracks[num].album.images[0].url
+          console.log(previewImgURL)
+          console.log(previewURL)
+        } else if (color.id == "orange") {
           console.log(genreId)
           const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=1&target_danceability=1&min_tempo=80&min-popularity=80`, {
             method: 'GET',
@@ -148,11 +175,11 @@ const giveGenreToColor = async () => {
           const data = await result.json();
           console.log(data)
           const num = (Math.floor(Math.random() * data.tracks.length));
-          console.log(data.tracks[num].preview_url)
-          return data;
-        } 
-        
-        else if (color.id == "red") {
+          const previewURL = data.tracks[num].preview_url
+          const previewImgURL = data.tracks[num].album.images[0].url
+          console.log(previewImgURL)
+          console.log(previewURL)
+        } else if (color.id == "red") {
           console.log(genreId)
           const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=0.2&target_danceability=0.2&max_tempo=60&min-popularity=80`, {
             method: 'GET',
@@ -163,11 +190,11 @@ const giveGenreToColor = async () => {
           const data = await result.json();
           console.log(data)
           const num = (Math.floor(Math.random() * data.tracks.length));
-          console.log(data.tracks[num].preview_url)
-          return data;
-        } 
-        
-        else if (color.id == "blue") {
+          const previewURL = data.tracks[num].preview_url
+          const previewImgURL = data.tracks[num].album.images[0].url
+          console.log(previewImgURL)
+          console.log(previewURL)
+        } else if (color.id == "blue") {
           console.log(genreId)
           const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=0.7&target_danceability=0.7&min_tempo=60&min-popularity=80`, {
             method: 'GET',
@@ -178,11 +205,11 @@ const giveGenreToColor = async () => {
           const data = await result.json();
           console.log(data)
           const num = (Math.floor(Math.random() * data.tracks.length));
-          console.log(data.tracks[num].preview_url)
-          return data;
-        } 
-        
-        else if (color.id == "green") {
+          const previewURL = data.tracks[num].preview_url
+          const previewImgURL = data.tracks[num].album.images[0].url
+          console.log(previewImgURL)
+          console.log(previewURL)
+        } else if (color.id == "green") {
           console.log(genreId)
           const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&target_energy=0&target_danceability=0&man_tempo=70&min-popularity=80`, {
             method: 'GET',
@@ -193,12 +220,13 @@ const giveGenreToColor = async () => {
           const data = await result.json();
           console.log(data)
           const num = (Math.floor(Math.random() * data.tracks.length));
-          console.log(data.tracks[num].preview_url)
-          return data;
+          const previewURL = data.tracks[num].preview_url
+          const previewImgURL = data.tracks[num].album.images[0].url
+          console.log(previewImgURL)
+          console.log(previewURL)
         }
       }
       getTrackByGenre();
-
     } else {
       return;
     }
@@ -207,22 +235,10 @@ const giveGenreToColor = async () => {
 giveGenreToColor();
 
 
+// const renderHTML = async () => {
 
-// Get Track By Genre
+//   let data = await giveGenreToColor()
+//   console.log(data)
 
-// Get Track
-// const getTrack = async () => {
-
-//   const token = await getToken();
-
-//   const result = await fetch(`${trackEndPoint}`, {
-//     method: 'GET',
-//     headers: {
-//       'Authorization': 'Bearer ' + token
-//     }
-//   });
-
-//   const data = await result.json();
-//   return data;
 // }
-// getTrack();
+// renderHTML()
