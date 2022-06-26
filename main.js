@@ -60,7 +60,6 @@ const navOffsetTop = document.querySelector("nav").offsetHeight;
 const firstTop = pages[0].offsetTop - navOffsetTop;
 const secondTop = pages[1].offsetTop - navOffsetTop;
 const thirdTop = pages[2].offsetTop - navOffsetTop;
-console.log(thirdTop)
 
 page_pointer[0].addEventListener("click", () => {
   window.scroll({
@@ -81,15 +80,4 @@ page_pointer[2].addEventListener("click", () => {
     top: thirdTop,
     behavior: "smooth"
   })
-})
-
-// music player
-
-const likeSong = document.getElementById("like_song")
-likeSong.addEventListener("click", (e) => {
-  if (e.target.style.filter == false) {
-    e.target.style.filter = "invert(15%) sepia(81%) saturate(7389%) hue-rotate(358deg) brightness(102%) contrast(116%)"
-  } else {
-    e.target.style.removeProperty("filter")
-  }
 })
