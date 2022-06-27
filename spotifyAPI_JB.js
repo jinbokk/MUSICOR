@@ -97,8 +97,6 @@ const giveGenreToColor = async () => {
           }
         });
 
-        console.log(result)
-
         const data = await result.json();
         const num = (Math.floor(Math.random() * data.tracks.length));
         const targetData = data.tracks[num];
@@ -137,10 +135,7 @@ const giveGenreToColor = async () => {
           </div>
         `;
 
-        console.log(html)
-
         detailDiv.innerHTML += html
-
 
         const backgroundColor = {
           black: "rgba(0, 0, 0, 0.9)",
