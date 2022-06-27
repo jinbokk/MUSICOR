@@ -34,8 +34,6 @@ const getAvailableGenreSeeds = async () => {
 
 // Give genre to color from genre seeds
 const giveGenreToColor = async () => {
-try {
-  
   const genreData = await getAvailableGenreSeeds();
 
   const genreSet = {
@@ -119,7 +117,7 @@ try {
           <div class="musicPlayContainer" id="music_player">
             <div>
               <img class="albumCover" src="${previewImgURL}">\
-              <button class="anotherColorBtn"id="anotherColor_btn">ANOTHER COLOR</button>  
+              <button class="anotherColorBtn"id="anotherColor_btn">ANOTHER COLOR</button>
               <button class="shuffleBtn" id="shuffle_btn">SHUFFLE</button> 
             </div>
             <div class="albumCover_text">
@@ -139,6 +137,8 @@ try {
           </div>
         `;
 
+        console.log(html)
+
         detailDiv.innerHTML += html
 
 
@@ -150,12 +150,9 @@ try {
           white: "rgba(173, 173, 173, 0.9)",
           orange: "rgb(255, 115, 0, 0.5)",
           red: "rgba(183, 21, 21, 0.5)",
-          blue: "rgba(35, 35, 188, 0.9)",
+          blue: "rgba(36, 36, 160, 0.9)",
           green: "rgb(0, 83, 8, 0.9)"
         }
-
-        // document.body.style.transition = "1s"
-        // document.body.style.backgroundColor = eval(`backgroundColor.${colorId}`)
 
         document.getElementById("colorPick_section").style.transition = "1s"
         document.getElementById("colorPick_section").style.backgroundColor = eval(`backgroundColor.${colorId}`)
@@ -185,7 +182,7 @@ try {
         anotherColorBtn.addEventListener("click", () => {
           audio.pause()
           document.getElementById("colorPick_section").style.removeProperty("background-color");
-          detailDiv.style.display = "none";
+          detailDiv.style.display = "";
 
           gsap.to(detailDiv, {
             duration: .5,
@@ -226,7 +223,6 @@ try {
             return
           } else {
             audio.volume = 1,
-              console.log(audio)
             audio.play()
             return
           }
@@ -256,15 +252,11 @@ try {
             e.target.style.removeProperty("filter")
           }
         })
-
       }
       getTrackByGenre();
     } else {
       return;
     }
   })
-} catch (error) {
-  console.log(error.message) 
- }
 };
 giveGenreToColor();

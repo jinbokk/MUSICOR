@@ -339,11 +339,6 @@ nav span {
 
 /* -------------colorPick_section------------- */
 
-#colorPick_section {
-  /* height:100vh; */
-  height: calc(100vh - 60px);
-}
-
 .colorPickContainer {
   display: flex;
   justify-content: center;
@@ -588,7 +583,7 @@ nav span {
 }
 
 .blue:hover {
-  background-color: rgba(35, 35, 188, 0.9);
+  background-color: rgba(36, 36, 160, 0.9);
   transition: 0.2s;
 }
 
@@ -717,27 +712,28 @@ nav span {
   position: absolute;
   top: 130px;
   left: -150px;
+  color: white;
 }
 
 .shuffleBtn {
   position: absolute;
   top: 130px;
   right: -105px;
+  color: white;
 }
 
 /* -------------footer_section------------- */
 
 .footer_section {
   border-top: 1px solid rgb(255, 255, 255, 0.1);
-  padding-top: 60px;
-  height: 350px;
+  height: auto;
+  margin-bottom: 120px;
 }
 
 .footer_container {
   padding-left: 15%;
   padding-right: 15%;
   padding-top: 5%;
-  padding-bottom: 5%;
   height: 100%;
   display: flex;
 }

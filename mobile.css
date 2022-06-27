@@ -20,6 +20,10 @@
     height: 60px;
   }
 
+  .pagePointer_container {
+    height: 80px;
+  }
+
   /* -------------sidebar------------- */
 
   .sidebar_container {
@@ -49,13 +53,19 @@
 
   .userInfo_container {
     width: 250px;
+    right: 10px;
+  }
+
+  .userInfo_menu div {
+    padding: 10px;
+    font-size: 15px;
   }
 
   /* -------------subTitle_section------------- */
 
   #subTitle_section img {
     object-fit: cover;
-    object-position: -1150px;
+    object-position: -1250px;
   }
 
   .subTitle {
@@ -91,10 +101,16 @@
 
   /* -------------colorPick_section------------- */
 
-  .colorPick_container {
+
+  .colorPickContainer {
+    height: calc(100vh - 60px);
     justify-content: left;
-    width: 100vw;
     overflow: scroll;
+    align-items: center;
+  }
+
+  .colorPick_container {
+    width: 100vw;
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -127,9 +143,9 @@
     top: 50%;
     left: 50%;
   }
-  
+
   .albumCover_text {
-    width:300px;
+    width: 300px;
   }
 
   .anotherColorBtn {
@@ -137,7 +153,7 @@
     top: -100px;
     left: 0px;
   }
-  
+
   .shuffleBtn {
     position: absolute;
     top: -100px;
@@ -148,8 +164,8 @@
 
   .footer_container {
     flex-direction: column;
-    height: auto;
     padding-left: 30px;
+    height: auto;
   }
 
   .footer_container .col {
@@ -181,4 +197,5 @@
     transform: scale(.85);
     transform-origin: left;
   }
+  
 }
