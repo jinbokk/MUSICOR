@@ -73,12 +73,6 @@ const giveGenreToColor = async () => {
       const colorPickSection = document.getElementById("color_container")
 
       gsap.to(colorPickSection, {
-        // scrollTrigger: {
-        //   trigger : colorPickSection,
-        //   start : "top",
-        //   end : "top",
-        //   markers: true
-        // },
         duration: 1,
         scale: .9,
       }).then(gsap.to(colorPickSection, {
@@ -105,9 +99,11 @@ const giveGenreToColor = async () => {
         });
 
         console.log(result)
+
         const data = await result.json();
         const num = (Math.floor(Math.random() * data.tracks.length));
         const targetData = data.tracks[num];
+        const previewSongURL = targetData.preview_url;
         const previewImgURL = targetData.album.images[1].url;
         const title = targetData.name;
         const artist = targetData.artists[0].name;
@@ -120,19 +116,23 @@ const giveGenreToColor = async () => {
           `
           <div class="musicPlayContainer" id="music_player">
             <div>
-              <img class="albumCover" src="${previewImgURL}"/>
-              <div class="albumCover_text">
-                <h2>${title}</h2>
-                <h5>By ${artist}</h5>
-              </div>
+              <img class="albumCover" src="${previewImgURL}">\
+              <button class="anotherColorBtn"id="anotherColor_btn">ANOTHER COLOR</button>  
+              <button class="shuffleBtn" id="shuffle_btn">SHUFFLE</button> 
             </div>
-
+            <div class="albumCover_text">
+              <h2>${title}</h2>
+              <h5>By ${artist}</h5>
+            </div>
             <div class="UIContainer">
-              <i class="fa-solid fa-backward"></i>
-              <i class="fa-solid fa-circle-play"></i>
-              <i class="fa-solid fa-circle-pause"></i>
-              <i class="fa-solid fa-forward"></i>
+              <i class="fa-solid fa-backward" id="backward_btn"></i>
+              <i class="fa-solid fa-circle-play" id="play_btn"></i>
+              <i class="fa-solid fa-circle-pause" id="pause_btn"></i>
+              <i class="fa-solid fa-forward" id="forward_btn"></i>
               <i class="fa-solid fa-heart" id="like_song"></i>
+            </div>
+            <div class="UIComment" id="UI_comment">
+              <p>30 seconds of preview will be provided by spotify</p>
             </div>
           </div>
         `;
@@ -152,24 +152,106 @@ const giveGenreToColor = async () => {
           green: "rgb(0, 83, 8, 0.9)"
         }
 
-        console.log(backgroundColor)
+        // document.body.style.transition = "1s"
+        // document.body.style.backgroundColor = eval(`backgroundColor.${colorId}`)
 
         document.getElementById("colorPick_section").style.transition = "1s"
         document.getElementById("colorPick_section").style.backgroundColor = eval(`backgroundColor.${colorId}`)
 
-
         gsap.to(detailDiv, {
           duration: .3,
+          x: "0",
           scale: .95,
         }).then(gsap.to(detailDiv, {
           duration: .5,
+          x: "0",
           opacity: 1,
           ease: "power4.in",
         }))
 
-        const likeSong = document.getElementById("like_song")
+        let audio = new Audio(previewSongURL)
 
-        likeSong.addEventListener("click", (e) => {
+        const playBtn = document.getElementById("play_btn")
+        console.log(playBtn)
+        const pauseBtn = document.getElementById("pause_btn")
+        console.log(pauseBtn)
+        const forwardBtn = document.getElementById("forward_btn")
+        console.log(forwardBtn)
+        const backwardBtn = document.getElementById("backward_btn")
+        console.log(backwardBtn)
+        const likeSongBtn = document.getElementById("like_song")
+        console.log(likeSongBtn)
+
+        const anotherColorBtn = document.getElementById("anotherColor_btn")
+        const shuffleBtn = document.getElementById("shuffle_btn")
+
+        anotherColorBtn.addEventListener("click", () => {
+          audio.pause()
+          document.getElementById("colorPick_section").style.removeProperty("background-color");
+
+          gsap.to(detailDiv, {
+            duration: .3,
+            scale: .95,
+          }).then(gsap.to(detailDiv, {
+            duration: .5,
+            x: "200%",
+            opacity: 0,
+            ease: "power4.in",
+          }))
+
+          gsap.to(colorPickSection, {
+            duration: 1,
+            scale: .9,
+          }).then(gsap.to(colorPickSection, {
+            duration: 2,
+            opacity: 1,
+            ease: "power4.out",
+            x: "0",
+            delay: .3
+          }))
+        })
+
+        shuffleBtn.addEventListener("click", () => {
+          audio.pause()
+          getTrackByGenre()
+          return
+        })
+
+
+        playBtn.addEventListener("click", () => {
+          if (audio.src == "http://127.0.0.1:5500/null") {
+            const alertWindow = document.getElementById("UI_comment")
+            alertWindow.innerHTML = `
+            <p style="color:red">Sorry, this music does not provide a preview</p>
+            <p style="color:red">Please select a different music</p>
+            `
+            return
+          } else {
+            audio.volume = 1,
+              console.log(audio)
+            audio.play()
+            return
+          }
+        })
+
+        pauseBtn.addEventListener("click", () => {
+          audio.pause()
+          return
+        })
+
+        forwardBtn.addEventListener("click", () => {
+          audio.pause()
+          getTrackByGenre()
+          return
+        })
+
+        backwardBtn.addEventListener("click", () => {
+          audio.pause()
+          getTrackByGenre()
+          return
+        })
+
+        likeSongBtn.addEventListener("click", (e) => {
           if (e.target.style.filter == false) {
             e.target.style.filter = "invert(15%) sepia(81%) saturate(7389%) hue-rotate(358deg) brightness(102%) contrast(116%)"
           } else {

@@ -23,17 +23,17 @@ i {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 5px;
   padding-left: 90px;
   padding-right: 90px;
   align-items: center;
-  background-color: rgb(15, 15, 15);
+  background-color: rgba(15, 15, 15, 0.95);
   height: 60px;
   font-size: 24px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 2;
+
 }
 
 nav .linear_wipe {
@@ -74,23 +74,6 @@ nav span {
   transition: .2s;
   opacity: 1;
 }
-
-/* .downArrow {
-  position: fixed;
-  bottom: 3%;
-  left: 50%;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 30px;
-  cursor: pointer;
-  z-index: 1;
-  transition: 0.3s;
-}
-
-.downArrow:hover {
-  color: white;
-  transform: scale(1.1);
-  transition: 0.3s;
-} */
 
 /* -------------sidebar------------- */
 
@@ -291,12 +274,11 @@ nav span {
 
 #subTitle_section {
   height: 100vh;
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+  padding-bottom: 60px;
 }
 
 
 #subTitle_section img {
-  padding-bottom: 60px;
   height: 100vh;
   width: 100vw;
   object-fit: cover;
@@ -322,7 +304,6 @@ nav span {
   position: relative;
   height: 100vh;
   padding-bottom: 60px;
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .introContainer img {
@@ -362,17 +343,13 @@ nav span {
 /* -------------colorPick_section------------- */
 
 #colorPick_section {
-  position: relative;
+  padding-bottom: 60px;
 }
 
 .colorPickContainer {
   display: flex;
   justify-content: center;
-  height: 100vh;
   overflow: scroll;
-  padding-bottom: 100px;
-  /* padding-left: 15%;
-  padding-right: 15%; */
 }
 
 .colorContainer {
@@ -645,10 +622,6 @@ nav span {
 
 /* -------------music_player------------- */
 
-/* #colorPick_section {
-  background-color: red;
-} */
-
 #song_detail {
   position: absolute;
   top: 50%;
@@ -669,26 +642,29 @@ nav span {
   width: 300px;
   height: 300px;
   border-radius: 4%;
-  margin-bottom: 25px;
   object-fit: contain;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 10px 50px;
 }
 
 .albumCover_text {
+  margin-top: 30px;
+  width: 600px;
   color: rgb(220, 220, 220);
-  text-align: right;
+  text-align: center;
 }
 
 .albumCover_text h2 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .UIContainer {
   display: flex;
   justify-content: center;
   font-size: 30px;
-  width: 100%;
-  margin-top: 35px;
+  margin-top: 25px;
+  /* position: absolute;
+  top: 60px;
+  right:0; */
 }
 
 .UIContainer i {
@@ -713,11 +689,54 @@ nav span {
   padding-left: 40px;
 }
 
+.UIComment {
+  text-align: right;
+  font-size: 13px;
+  opacity: .5;
+  margin-top: 30px;
+}
+
+#song_detail button {
+  border-radius: 10px;
+  font-size: 15px;
+  background: none;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  transition: .3s;
+  cursor: pointer;
+  mix-blend-mode: difference;
+}
+
+#song_detail button:hover {
+  transition: .3s;
+  transform: scale(1.05);
+}
+
+#song_detail button:active {
+  transition: .3s;
+  transform: scale(1);
+}
+
+.anotherColorBtn {
+  position: absolute;
+  top: 130px;
+  left: -150px;
+}
+
+.shuffleBtn {
+  position: absolute;
+  top: 130px;
+  right: -105px;
+}
+
+
+
 /* -------------footer_section------------- */
 
 .footer_section {
   border-top: 1px solid rgb(255, 255, 255, 0.3);
-  margin-top: 30px;
+  padding-top: 30px;
   height: 350px;
 }
 
