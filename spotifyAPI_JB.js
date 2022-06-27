@@ -61,20 +61,35 @@ const giveGenreToColor = async () => {
     green: 'target_energy=0&target_danceability=0&man_tempo=70'
   }
 
-  const colorContainer = document.querySelector(".colorPick_container");
+  const colorContainer = document.querySelector(".colorPickContainer");
 
   colorContainer.addEventListener("click", (e) => {
 
-    // colorContainer.className += 'slide-out-left'
-    // colorContainer.style.visibility = "hidden"
-    colorContainer.style.visibility = "hidden"
-
     const color = e.target
     const colorId = color.id
-    const searchIndex = eval(`searchIndexByColor.${colorId}`);
 
     if (color.classList.contains('colorContainer')) {
 
+      const colorPickSection = document.getElementById("color_container")
+
+      gsap.to(colorPickSection, {
+        // scrollTrigger: {
+        //   trigger : colorPickSection,
+        //   start : "top",
+        //   end : "top",
+        //   markers: true
+        // },
+        duration: 1,
+        scale: .9,
+      }).then(gsap.to(colorPickSection, {
+        duration: 2,
+        opacity: 0,
+        ease: "power4.out",
+        x: "-100%",
+        delay: .3
+      }))
+
+      const searchIndex = eval(`searchIndexByColor.${colorId}`);
       const genresByColor = eval(`genreSet.genres_${colorId}`);
       const num = (Math.floor(Math.random() * genresByColor.length));
       const genreIdByColor = genresByColor[num];
@@ -124,9 +139,33 @@ const giveGenreToColor = async () => {
 
         detailDiv.innerHTML += html
 
-        // pageChanger..
 
-        detailDiv.style.visibility = "visible";
+        const backgroundColor = {
+          black: "rgba(0, 0, 0, 0.9)",
+          gray: "rgba(50, 50, 50, 0.9)",
+          violet: "rgba(100, 16, 100, 0.9)",
+          yellow: "rgba(230, 211, 0, 0.5)",
+          white: "rgba(173, 173, 173, 0.9)",
+          orange: "rgb(255, 115, 0, 0.5)",
+          red: "rgba(183, 21, 21, 0.5)",
+          blue: "rgba(35, 35, 188, 0.9)",
+          green: "rgb(0, 83, 8, 0.9)"
+        }
+
+        console.log(backgroundColor)
+
+        document.getElementById("colorPick_section").style.transition = "1s"
+        document.getElementById("colorPick_section").style.backgroundColor = eval(`backgroundColor.${colorId}`)
+
+
+        gsap.to(detailDiv, {
+          duration: .3,
+          scale: .95,
+        }).then(gsap.to(detailDiv, {
+          duration: .5,
+          opacity: 1,
+          ease: "power4.in",
+        }))
 
         const likeSong = document.getElementById("like_song")
 

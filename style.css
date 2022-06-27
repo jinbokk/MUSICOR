@@ -365,7 +365,7 @@ nav span {
   position: relative;
 }
 
-.colorPick_container {
+.colorPickContainer {
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -643,72 +643,18 @@ nav span {
   transition: 0.2s;
 }
 
-/* -------------footer_section------------- */
-
-.footer_section {
-  border-top: 1px solid rgb(255, 255, 255, 0.3);
-  margin-top: 30px;
-  height: 350px;
-}
-
-.footer_container {
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  height: 100%;
-  display: flex;
-}
-
-.footer_container .linear_wipe {
-  padding-right: 50px;
-}
-
-.col {
-  color: rgb(220, 220, 220);
-  display: block;
-  height: 100%;
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.col p {
-  font-size: 13px;
-  font-weight: 600;
-  color: rgb(140, 140, 140)
-}
-
-.col a {
-  font-size: 11px;
-  display: inline-block;
-  padding-top: 20px;
-  cursor: pointer;
-}
-
-.col a:hover {
-  background: linear-gradient(to right, rgb(135, 0, 135) 0%, rgb(221, 16, 16) 25%, rgb(135, 0, 135) 50%, rgb(27, 45, 252) 75%, rgb(135, 0, 135) 100%);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 4s linear infinite;
-}
-
-.col img {
-  cursor: pointer;
-  margin-top: 15px;
-  margin-bottom: 20px;
-}
-
 /* -------------music_player------------- */
+
+/* #colorPick_section {
+  background-color: red;
+} */
 
 #song_detail {
   position: absolute;
-  visibility: hidden;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
 .musicPlayContainer {
@@ -765,4 +711,62 @@ nav span {
   transform: none;
   transition: none;
   padding-left: 40px;
+}
+
+/* -------------footer_section------------- */
+
+.footer_section {
+  border-top: 1px solid rgb(255, 255, 255, 0.3);
+  margin-top: 30px;
+  height: 350px;
+}
+
+.footer_container {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  height: 100%;
+  display: flex;
+}
+
+.footer_container .linear_wipe {
+  padding-right: 50px;
+}
+
+.col {
+  color: rgb(220, 220, 220);
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col p {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(140, 140, 140)
+}
+
+.col a {
+  font-size: 11px;
+  display: inline-block;
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+.col a:hover {
+  background: linear-gradient(to right, rgb(135, 0, 135) 0%, rgb(221, 16, 16) 25%, rgb(135, 0, 135) 50%, rgb(27, 45, 252) 75%, rgb(135, 0, 135) 100%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+}
+
+.col img {
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
