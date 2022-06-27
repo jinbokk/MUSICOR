@@ -57,7 +57,6 @@ const page_pointer = document.querySelectorAll(".pagePointer span")
 
 const pages = document.querySelectorAll("section")
 const navOffsetTop = document.querySelector("nav").offsetHeight;
-console.log(navOffsetTop)
 
 const firstTop = pages[0].offsetTop - navOffsetTop;
 const secondTop = pages[1].offsetTop - navOffsetTop;

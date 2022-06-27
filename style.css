@@ -179,13 +179,13 @@ nav span {
   position: fixed;
   top: 60px;
   right: 40px;
-  height: 570px;
   width: 300px;
   background-color: rgba(0, 0, 0, 0.95);
   z-index: 3;
   opacity: 0;
   transition: .3s;
   border-radius: 20px;
+  padding-bottom: 30px;
 }
 
 #userInfo_icon:checked~.userInfo_container {
@@ -347,8 +347,8 @@ nav span {
 .colorPickContainer {
   display: flex;
   justify-content: center;
-  overflow: scroll;
-  padding:30px;
+  overflow: hidden;
+  padding: 30px;
 }
 
 .colorContainer {

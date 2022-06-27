@@ -34,7 +34,8 @@ const getAvailableGenreSeeds = async () => {
 
 // Give genre to color from genre seeds
 const giveGenreToColor = async () => {
-
+try {
+  
   const genreData = await getAvailableGenreSeeds();
 
   const genreSet = {
@@ -91,7 +92,7 @@ const giveGenreToColor = async () => {
       const getTrackByGenre = async () => {
         const token = await getToken();
         const genreId = genreIdByColor;
-        const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&${searchIndex}&min-popularity=90`, {
+        const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&${searchIndex}&min-popularity=90?limit=30`, {
           method: 'GET',
           headers: {
             'Authorization': 'Bearer ' + token
@@ -173,15 +174,10 @@ const giveGenreToColor = async () => {
         let audio = new Audio(previewSongURL)
 
         const playBtn = document.getElementById("play_btn")
-        console.log(playBtn)
         const pauseBtn = document.getElementById("pause_btn")
-        console.log(pauseBtn)
         const forwardBtn = document.getElementById("forward_btn")
-        console.log(forwardBtn)
         const backwardBtn = document.getElementById("backward_btn")
-        console.log(backwardBtn)
         const likeSongBtn = document.getElementById("like_song")
-        console.log(likeSongBtn)
 
         const anotherColorBtn = document.getElementById("anotherColor_btn")
         const shuffleBtn = document.getElementById("shuffle_btn")
@@ -267,5 +263,8 @@ const giveGenreToColor = async () => {
       return;
     }
   })
+} catch (error) {
+  console.log(error.message) 
+ }
 };
 giveGenreToColor();
