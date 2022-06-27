@@ -214,7 +214,7 @@ const giveGenreToColor = async () => {
 
 
         playBtn.addEventListener("click", () => {
-          if (audio.src == "http://127.0.0.1:5500/null") {
+          if (audio.src == "https://musicor.netlify.app/null") {
             const alertWindow = document.getElementById("UI_comment")
             alertWindow.innerHTML = `
             <p style="color:red">Sorry, this music does not provide a preview</p>
