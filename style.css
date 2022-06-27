@@ -10,7 +10,7 @@
 
 body {
   margin: 0;
-  margin-top: 60px;
+  padding-top: 60px;
   color: rgb(220, 220, 220);
   background-color: rgb(15, 15, 15);
   font-family: 'ONE', 'SCDream4', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -44,10 +44,6 @@ nav .linear_wipe {
 nav span {
   padding-left: 20px;
   padding-right: 20px;
-}
-
-.blank {
-  height: 100px;
 }
 
 /* -------------pagePointer------------- */
@@ -279,7 +275,7 @@ nav span {
 
 
 #subTitle_section img {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   object-fit: cover;
   will-change: contents;
@@ -303,11 +299,12 @@ nav span {
 #intro_section {
   position: relative;
   height: 100vh;
+  margin-top: 60px;
   padding-bottom: 60px;
 }
 
 .introContainer img {
-  height: 100vh;
+  height: 100%;
   padding-bottom: 60px;
   object-fit: cover;
   position: absolute;
@@ -343,21 +340,22 @@ nav span {
 /* -------------colorPick_section------------- */
 
 #colorPick_section {
-  padding-bottom: 60px;
+  /* height:100vh; */
+  height: calc(100vh - 60px);
 }
 
 .colorPickContainer {
   display: flex;
   justify-content: center;
   overflow: scroll;
+  padding:30px;
 }
 
 .colorContainer {
   width: 200px;
   height: 200px;
   border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   margin-left: 40px;
   margin-right: 40px;
   padding: 13px;
@@ -662,9 +660,6 @@ nav span {
   justify-content: center;
   font-size: 30px;
   margin-top: 25px;
-  /* position: absolute;
-  top: 60px;
-  right:0; */
 }
 
 .UIContainer i {
@@ -730,13 +725,11 @@ nav span {
   right: -105px;
 }
 
-
-
 /* -------------footer_section------------- */
 
 .footer_section {
-  border-top: 1px solid rgb(255, 255, 255, 0.3);
-  padding-top: 30px;
+  border-top: 1px solid rgb(255, 255, 255, 0.1);
+  padding-top: 60px;
   height: 350px;
 }
 

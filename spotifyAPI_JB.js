@@ -109,6 +109,7 @@ const giveGenreToColor = async () => {
         const artist = targetData.artists[0].name;
 
         const detailDiv = document.getElementById("song_detail");
+        // detailDiv.style.display = "block";
 
         detailDiv.innerHTML = '';
 
@@ -159,7 +160,7 @@ const giveGenreToColor = async () => {
         document.getElementById("colorPick_section").style.backgroundColor = eval(`backgroundColor.${colorId}`)
 
         gsap.to(detailDiv, {
-          duration: .3,
+          duration: .5,
           x: "0",
           scale: .95,
         }).then(gsap.to(detailDiv, {
@@ -188,9 +189,10 @@ const giveGenreToColor = async () => {
         anotherColorBtn.addEventListener("click", () => {
           audio.pause()
           document.getElementById("colorPick_section").style.removeProperty("background-color");
+          detailDiv.style.display = "none";
 
           gsap.to(detailDiv, {
-            duration: .3,
+            duration: .5,
             scale: .95,
           }).then(gsap.to(detailDiv, {
             duration: .5,
