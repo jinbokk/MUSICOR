@@ -56,7 +56,6 @@ nav span {
   height: 60px;
   display: flex;
   justify-content: center;
-  /* background-color: inherit; */
 }
 
 .pagePointer span i {

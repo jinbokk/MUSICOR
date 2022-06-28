@@ -16,10 +16,6 @@
     padding-right: 10px;
   }
 
-  .blank {
-    height: 60px;
-  }
-
   .pagePointer_container {
     height: 80px;
   }
@@ -131,7 +127,7 @@
   }
 
   .colorContainer p {
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 200;
   }
 
@@ -140,12 +136,19 @@
   }
 
   #song_detail {
-    top: 50%;
+    top: 55%;
     left: 50%;
   }
 
   .albumCover_text {
     width: 300px;
+  }
+
+  .UIComment {
+    text-align: center;
+    font-size: 12px;
+    opacity: .5;
+    margin-top: 30px;
   }
 
   .anotherColorBtn {
