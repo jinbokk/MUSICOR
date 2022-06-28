@@ -43,9 +43,9 @@ const giveGenreToColor = async () => {
     genres_yellow: [genreData.genres[94], genreData.genres[100]],
     genres_white: [genreData.genres[4], genreData.genres[85]],
     genres_orange: [genreData.genres[18], genreData.genres[31], genreData.genres[124]],
-    genres_red: [genreData.genres[8]],
+    genres_red: [genreData.genres[8], genreData.genres[66]],
     genres_blue: [genreData.genres[94]],
-    genres_green: [genreData.genres[0], genreData.genres[110], genreData.genres[115]]
+    genres_green: [genreData.genres[0],genreData.genres[102], genreData.genres[85]]
   }
 
   const searchIndexByColor = {
@@ -55,7 +55,7 @@ const giveGenreToColor = async () => {
     yellow: 'target_energy=0.9&target_danceability=0.9&min_tempo=144',
     white: 'min_instrumentalness=0.9&target_energy=0&target_danceability=0',
     orange: 'target_energy=1&target_danceability=1&min_tempo=80',
-    red: 'target_energy=0.2&target_danceability=0.2&max_tempo=60',
+    red: 'target_energy=0.2&target_danceability=0.2&max_tempo=80',
     blue: 'target_energy=0.7&target_danceability=0.7&min_tempo=60',
     green: 'target_energy=0&target_danceability=0&man_tempo=70'
   }
