@@ -45,7 +45,7 @@ const giveGenreToColor = async () => {
     genres_orange: [genreData.genres[18], genreData.genres[31], genreData.genres[124]],
     genres_red: [genreData.genres[8], genreData.genres[66]],
     genres_blue: [genreData.genres[94]],
-    genres_green: [genreData.genres[0],genreData.genres[102], genreData.genres[85]]
+    genres_green: [genreData.genres[0], genreData.genres[102], genreData.genres[85]]
   }
 
   const searchIndexByColor = {
@@ -65,11 +65,10 @@ const giveGenreToColor = async () => {
   colorContainer.addEventListener("click", (e) => {
 
     const color = e.target
-
-    console.log(color)
     const colorId = color.id
 
     if (color.classList.contains('colorContainer')) {
+
 
       const colorPickSection = document.getElementById("color_container")
 
@@ -108,6 +107,8 @@ const giveGenreToColor = async () => {
         const artist = targetData.artists[0].name;
 
         const detailDiv = document.getElementById("song_detail");
+
+        detailDiv.style.display = "block";
 
         detailDiv.innerHTML = '';
 
@@ -178,7 +179,6 @@ const giveGenreToColor = async () => {
         anotherColorBtn.addEventListener("click", () => {
           audio.pause()
           document.getElementById("colorPick_section").style.removeProperty("background-color");
-          detailDiv.style.display = "";
 
           gsap.to(detailDiv, {
             duration: .5,
@@ -200,6 +200,10 @@ const giveGenreToColor = async () => {
             x: "0",
             delay: .3
           }))
+
+          setTimeout(() => {
+            detailDiv.style.display = "none";
+          }, 500)
         })
 
         shuffleBtn.addEventListener("click", () => {
@@ -219,7 +223,7 @@ const giveGenreToColor = async () => {
             return
           } else {
             audio.volume = 1,
-            audio.play()
+              audio.play()
             return
           }
         })
