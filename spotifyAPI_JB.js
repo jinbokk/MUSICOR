@@ -65,6 +65,8 @@ const giveGenreToColor = async () => {
   colorContainer.addEventListener("click", (e) => {
 
     const color = e.target
+
+    console.log(color)
     const colorId = color.id
 
     if (color.classList.contains('colorContainer')) {
@@ -90,7 +92,7 @@ const giveGenreToColor = async () => {
       const getTrackByGenre = async () => {
         const token = await getToken();
         const genreId = genreIdByColor;
-        const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&${searchIndex}&min-popularity=90?limit=30`, {
+        const result = await fetch(`https://api.spotify.com/v1/recommendations/?seed_genres=${genreId}&market=US&${searchIndex}&min-popularity=80?limit=30`, {
           method: 'GET',
           headers: {
             'Authorization': 'Bearer ' + token
@@ -106,7 +108,6 @@ const giveGenreToColor = async () => {
         const artist = targetData.artists[0].name;
 
         const detailDiv = document.getElementById("song_detail");
-        // detailDiv.style.display = "block";
 
         detailDiv.innerHTML = '';
 

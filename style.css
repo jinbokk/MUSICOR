@@ -380,12 +380,12 @@ nav span {
   pointer-events: none;
 }
 
-.black {
+.bgAnchor {
   position: relative;
   z-index: 1;
 }
 
-.black::before {
+#black::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -401,17 +401,12 @@ nav span {
   border-radius: 10px;
 }
 
-.black:hover {
+#black:hover {
   background-color: rgba(0, 0, 0, 0.9);
   transition: 0.2s;
 }
 
-.gray {
-  position: relative;
-  z-index: 1;
-}
-
-.gray::before {
+#gray::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -426,17 +421,12 @@ nav span {
   border-radius: 10px;
 }
 
-.gray:hover {
+#gray:hover {
   background-color: rgba(50, 50, 50, 0.9);
   transition: 0.2s;
 }
 
-.violet {
-  position: relative;
-  z-index: 1;
-}
-
-.violet::before {
+#violet::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -452,17 +442,12 @@ nav span {
   border-radius: 10px;
 }
 
-.violet:hover {
+#violet:hover {
   background-color: rgba(100, 16, 100, 0.9);
   transition: 0.2s;
 }
 
-.yellow {
-  position: relative;
-  z-index: 1;
-}
-
-.yellow::before {
+#yellow::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -478,17 +463,12 @@ nav span {
   border-radius: 10px;
 }
 
-.yellow:hover {
+#yellow:hover {
   background-color: rgba(230, 211, 0, 0.5);
   transition: 0.2s;
 }
 
-.white {
-  position: relative;
-  z-index: 1;
-}
-
-.white::before {
+#white::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -504,17 +484,12 @@ nav span {
   border-radius: 10px;
 }
 
-.white:hover {
+#white:hover {
   background-color: rgba(173, 173, 173, 0.9);
   transition: 0.2s;
 }
 
-.orange {
-  position: relative;
-  z-index: 1;
-}
-
-.orange::before {
+#orange::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -530,17 +505,12 @@ nav span {
   border-radius: 10px;
 }
 
-.orange:hover {
+#orange:hover {
   background-color: rgb(255, 115, 0, 0.5);
   transition: 0.2s;
 }
 
-.red {
-  position: relative;
-  z-index: 1;
-}
-
-.red::before {
+#red::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -556,17 +526,12 @@ nav span {
   border-radius: 10px;
 }
 
-.red:hover {
+#red:hover {
   background-color: rgba(183, 21, 21, 0.5);
   transition: 0.2s;
 }
 
-.blue {
-  position: relative;
-  z-index: 1;
-}
-
-.blue::before {
+#blue::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -582,17 +547,12 @@ nav span {
   border-radius: 10px;
 }
 
-.blue:hover {
+#blue:hover {
   background-color: rgba(36, 36, 160, 0.9);
   transition: 0.2s;
 }
 
-.green {
-  position: relative;
-  z-index: 1;
-}
-
-.green::before {
+#green::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -608,7 +568,7 @@ nav span {
   border-radius: 10px;
 }
 
-.green:hover {
+#green:hover {
   background-color: rgb(0, 83, 8, 0.9);
   transition: 0.2s;
 }
