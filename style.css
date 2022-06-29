@@ -1,15 +1,15 @@
 @font-face {
-  font-family: 'SCDream4';
-  src: url('/font/SCDream4.otf');
+  font-family: "SCDream4";
+  src: url("/font/SCDream4.otf");
 }
 
 @font-face {
-  font-family: 'ONE';
-  src: url('/font/ONE.otf');
+  font-family: "ONE";
+  src: url("/font/ONE.otf");
 }
 
 * {
-  font-family: 'ONE', 'SCDream4', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "ONE", "SCDream4", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -36,7 +36,6 @@ nav {
   top: 0;
   width: 100%;
   z-index: 2;
-
 }
 
 nav .linear_wipe {
@@ -63,13 +62,13 @@ nav span {
 
 .pagePointer span i {
   padding: 20px;
-  transition: .5s;
-  opacity: .5;
+  transition: 0.5s;
+  opacity: 0.5;
 }
 
 .pagePointer span i:hover {
   transform: scale(1.5);
-  transition: .2s;
+  transition: 0.2s;
   opacity: 1;
 }
 
@@ -91,14 +90,14 @@ nav span {
   height: 100vh;
   width: 400px;
   opacity: 0;
-  transition: .4s;
+  transition: 0.4s;
 }
 
-#menu_icon:checked~.sidebar_container {
+#menu_icon:checked ~ .sidebar_container {
   position: fixed;
   left: 0;
   opacity: 1;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .sidebar_closeButton {
@@ -106,12 +105,12 @@ nav span {
   right: 35px;
   top: 60px;
   font-size: 30px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .sidebar_closeButton:hover {
   transform: scale(1.15);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .sidebar_closeArea {
@@ -124,13 +123,13 @@ nav span {
   height: 100vh;
   background-color: rgb(15, 15, 15, 0.5);
   opacity: 0;
-  transition: .2s;
+  transition: 0.2s;
 }
 
-#menu_icon:checked~.sidebar_closeArea {
+#menu_icon:checked ~ .sidebar_closeArea {
   visibility: visible;
   opacity: 1;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .sidebar_menu {
@@ -150,14 +149,21 @@ nav span {
   font-size: 15px;
   padding-bottom: 20px;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .sidebar_menu label:hover {
   transform: scale(1.1);
   transform-origin: left;
   transition: 0.3s;
-  background: linear-gradient(to right, rgb(135, 0, 135) 0%, rgb(221, 16, 16) 25%, rgb(135, 0, 135) 50%, rgb(27, 45, 252) 75%, rgb(135, 0, 135) 100%);
+  background: linear-gradient(
+    to right,
+    rgb(135, 0, 135) 0%,
+    rgb(221, 16, 16) 25%,
+    rgb(135, 0, 135) 50%,
+    rgb(27, 45, 252) 75%,
+    rgb(135, 0, 135) 100%
+  );
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -185,16 +191,16 @@ nav span {
   background-color: rgba(0, 0, 0, 0.95);
   z-index: 3;
   opacity: 0;
-  transition: .3s;
+  transition: 0.3s;
   border-radius: 20px;
   padding-bottom: 30px;
 }
 
-#userInfo_icon:checked~.userInfo_container {
+#userInfo_icon:checked ~ .userInfo_container {
   visibility: visible;
   top: 70px;
   opacity: 1;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .uerInfo_closeArea {
@@ -208,10 +214,10 @@ nav span {
   z-index: 2;
 }
 
-#userInfo_icon:checked~.uerInfo_closeArea {
+#userInfo_icon:checked ~ .uerInfo_closeArea {
   visibility: visible;
   opacity: 1;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .userInfo_closeButton {
@@ -248,7 +254,7 @@ nav span {
 
 .userInfo_menu div {
   padding: 15px;
-  transition: .3s;
+  transition: 0.3s;
   transform-origin: left;
 }
 
@@ -259,8 +265,15 @@ nav span {
 
 .userInfo_menu div:hover {
   transform: scale(1.1);
-  transition: .3s;
-  background: linear-gradient(to right, rgb(135, 0, 135) 0%, rgb(221, 16, 16) 25%, rgb(135, 0, 135) 50%, rgb(27, 45, 252) 75%, rgb(135, 0, 135) 100%);
+  transition: 0.3s;
+  background: linear-gradient(
+    to right,
+    rgb(135, 0, 135) 0%,
+    rgb(221, 16, 16) 25%,
+    rgb(135, 0, 135) 50%,
+    rgb(27, 45, 252) 75%,
+    rgb(135, 0, 135) 100%
+  );
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -275,7 +288,6 @@ nav span {
   padding-bottom: 60px;
 }
 
-
 #subTitle_section img {
   height: 100%;
   width: 100vw;
@@ -287,7 +299,7 @@ nav span {
   position: absolute;
   font-size: 140px;
   font-weight: bold;
-  font-family: 'ONE';
+  font-family: "ONE";
   text-align: left;
   color: rgb(220, 220, 220);
   position: absolute;
@@ -395,7 +407,7 @@ nav span {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: .2;
+  opacity: 0.2;
   background-image: url("/images/Pexels/black/pexels_black.jpg");
   background-repeat: none;
   background-position: center;
@@ -416,7 +428,7 @@ nav span {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: .2;
+  opacity: 0.2;
   background-image: url("/images/freepik/gray/freepik_gray_ (2).jpg");
   background-repeat: none;
   background-size: cover;
@@ -436,7 +448,7 @@ nav span {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: .2;
+  opacity: 0.2;
   background-image: url("/images/freepik/violet/freepik_violet_ (2).jpg");
   background-repeat: none;
   background-position: center;
@@ -457,7 +469,7 @@ nav span {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: .2;
+  opacity: 0.2;
   background-image: url("/images/freepik/yellow/freepik_yellow_(1).jpg");
   background-repeat: none;
   background-position: center;
@@ -478,7 +490,7 @@ nav span {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: .2;
+  opacity: 0.2;
   background-image: url("/images/freepik/white/freepik_white_ (2).jpg");
   background-repeat: none;
   background-position: center;
@@ -499,7 +511,7 @@ nav span {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: .2;
+  opacity: 0.2;
   background-image: url("/images/Pexels/orange/pexels_orange_ (1).jpg");
   background-repeat: none;
   background-position: center;
@@ -520,7 +532,7 @@ nav span {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: .2;
+  opacity: 0.2;
   background-image: url("/images/freepik/red/freepik_red_ (2).jpg");
   background-repeat: none;
   background-position: center;
@@ -541,7 +553,7 @@ nav span {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: .2;
+  opacity: 0.2;
   background-image: url("/images/freepik/blue/freepik_blue_ (1).jpg");
   background-repeat: none;
   background-position: center;
@@ -562,7 +574,7 @@ nav span {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: .2;
+  opacity: 0.2;
   background-image: url("/images/freepik/green/freepik_green_ (1).jpg");
   background-repeat: none;
   background-position: center;
@@ -621,18 +633,18 @@ nav span {
 
 .UIContainer i {
   padding: 10px;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .UIContainer i:hover {
   transform: scale(1.2);
   transform-origin: center;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .UIContainer i:active {
   transform: scale(1);
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .UIContainer i:last-child {
@@ -644,7 +656,7 @@ nav span {
 .UIComment {
   text-align: right;
   font-size: 13px;
-  opacity: .5;
+  opacity: 0.5;
   margin-top: 30px;
 }
 
@@ -655,18 +667,18 @@ nav span {
   border: none;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   padding: 10px;
-  transition: .3s;
+  transition: 0.3s;
   cursor: pointer;
   mix-blend-mode: difference;
 }
 
 #song_detail button:hover {
-  transition: .3s;
+  transition: 0.3s;
   transform: scale(1.05);
 }
 
 #song_detail button:active {
-  transition: .3s;
+  transition: 0.3s;
   transform: scale(1);
 }
 
@@ -716,7 +728,7 @@ nav span {
 .col p {
   font-size: 13px;
   font-weight: 600;
-  color: rgb(140, 140, 140)
+  color: rgb(140, 140, 140);
 }
 
 .col a {
@@ -727,7 +739,14 @@ nav span {
 }
 
 .col a:hover {
-  background: linear-gradient(to right, rgb(135, 0, 135) 0%, rgb(221, 16, 16) 25%, rgb(135, 0, 135) 50%, rgb(27, 45, 252) 75%, rgb(135, 0, 135) 100%);
+  background: linear-gradient(
+    to right,
+    rgb(135, 0, 135) 0%,
+    rgb(221, 16, 16) 25%,
+    rgb(135, 0, 135) 50%,
+    rgb(27, 45, 252) 75%,
+    rgb(135, 0, 135) 100%
+  );
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;

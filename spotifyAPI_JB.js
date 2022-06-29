@@ -19,15 +19,12 @@ getToken();
 // Get Available Genre Seeds to give genre to color
 const getAvailableGenreSeeds = async () => {
   const token = await getToken();
-  const result = await fetch(
-    `https://api.spotify.com/v1/recommendations/available-genre-seeds`,
-    {
-      method: "GET",
-      headers: {
-        Authorization: "Bearer " + token,
-      },
-    }
-  );
+  const result = await fetch(`https://api.spotify.com/v1/recommendations/available-genre-seeds`, {
+    method: "GET",
+    headers: {
+      Authorization: "Bearer " + token,
+    },
+  });
   const data = await result.json();
   return data;
 };
@@ -38,27 +35,14 @@ const giveGenreToColor = async () => {
 
   const genreSet = {
     genres_black: [genreData.genres[52]],
-    genres_gray: [
-      genreData.genres[52],
-      genreData.genres[2],
-      genreData.genres[94],
-      genreData.genres[16],
-    ],
+    genres_gray: [genreData.genres[52], genreData.genres[2], genreData.genres[94], genreData.genres[16]],
     genres_violet: [genreData.genres[94]],
     genres_yellow: [genreData.genres[94], genreData.genres[100]],
     genres_white: [genreData.genres[4], genreData.genres[85]],
-    genres_orange: [
-      genreData.genres[18],
-      genreData.genres[31],
-      genreData.genres[124],
-    ],
+    genres_orange: [genreData.genres[18], genreData.genres[31], genreData.genres[124]],
     genres_red: [genreData.genres[8], genreData.genres[66]],
     genres_blue: [genreData.genres[94]],
-    genres_green: [
-      genreData.genres[0],
-      genreData.genres[102],
-      genreData.genres[85],
-    ],
+    genres_green: [genreData.genres[0], genreData.genres[102], genreData.genres[85]],
   };
 
   const searchIndexByColor = {
@@ -168,8 +152,7 @@ const giveGenreToColor = async () => {
         };
 
         document.getElementById("colorPick_section").style.transition = "1s";
-        document.getElementById("colorPick_section").style.backgroundColor =
-          eval(`backgroundColor.${colorId}`);
+        document.getElementById("colorPick_section").style.backgroundColor = eval(`backgroundColor.${colorId}`);
 
         gsap
           .to(detailDiv, {
@@ -199,9 +182,7 @@ const giveGenreToColor = async () => {
 
         anotherColorBtn.addEventListener("click", () => {
           audio.pause();
-          document
-            .getElementById("colorPick_section")
-            .style.removeProperty("background-color");
+          document.getElementById("colorPick_section").style.removeProperty("background-color");
 
           gsap
             .to(detailDiv, {
