@@ -1,5 +1,12 @@
 .linear_wipe {
-  background: linear-gradient(to right, rgb(135, 0, 135) 0%, rgb(221, 16, 16) 25%, rgb(135, 0, 135) 50%, rgb(27, 45, 252) 75%, rgb(135, 0, 135) 100%);
+  background: linear-gradient(
+    to right,
+    rgb(135, 0, 135) 0%,
+    rgb(221, 16, 16) 25%,
+    rgb(135, 0, 135) 50%,
+    rgb(27, 45, 252) 75%,
+    rgb(135, 0, 135) 100%
+  );
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -108,7 +115,7 @@
   0% {
     opacity: 1;
   }
-  
+
   100% {
     transform: translateX(-1000px);
     visibility: hidden;

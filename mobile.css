@@ -1,5 +1,4 @@
-@media screen and (max-width:768px) {
-
+@media screen and (max-width: 768px) {
   body {
     margin: 0;
   }
@@ -34,7 +33,7 @@
     height: 100vh;
     width: 300px;
     opacity: 0;
-    transition: .4s;
+    transition: 0.4s;
   }
 
   .sidebar_menu {
@@ -97,7 +96,6 @@
 
   /* -------------colorPick_section------------- */
 
-
   .colorPickContainer {
     height: calc(100vh - 60px);
     justify-content: left;
@@ -147,7 +145,7 @@
   .UIComment {
     text-align: center;
     font-size: 12px;
-    opacity: .5;
+    opacity: 0.5;
     margin-top: 30px;
   }
 
@@ -197,8 +195,7 @@
   }
 
   .footerImg img {
-    transform: scale(.85);
+    transform: scale(0.85);
     transform-origin: left;
   }
-  
 }
