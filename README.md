@@ -1,3 +1,3 @@
 # MUSICOR
 
-musicor.netlify.app
+https://musicor.netlify.app/
